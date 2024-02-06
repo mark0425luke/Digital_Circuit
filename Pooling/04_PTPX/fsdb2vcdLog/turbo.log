@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Pooling/04_PTPX/File/Pooling_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0,0)-(6,1071602474) time 0.075146 0.301055 0.429255 delta 83955712 83955712 total 381468672 381468672
+Write signals (0,0)-(6,1071602474) time 2.936470 2.017839 0.016796 delta 757760 757760 total 382226432 382226432
+Unload (0,0)-(6,1071602474) time 0.006040 0.004030 0.002011 delta 0 0 total 382226432 382226432
+au time 3.631635 2.366867 0.475864 delta 109297664 109297664 total 211283968 211283968

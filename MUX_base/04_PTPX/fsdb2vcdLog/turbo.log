@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/MUX_base/04_PTPX/File/MUX_base_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0)-(360937500) time 0.140790 0.743001 0.701917 delta 86573056 86573056 total 387108864 387108864
+Write signals (0)-(360937500) time 2.341775 0.781983 0.010290 delta 3870720 3870720 total 390979584 390979584
+Unload (0)-(360937500) time 0.008746 0.008746 0.000000 delta 0 0 total 390979584 390979584
+au time 3.167772 1.694380 0.742062 delta 122847232 122847232 total 224833536 224833536

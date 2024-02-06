@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Decoder/04_PTPX/File/Decoder_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0)-(789453125) time 0.013599 0.034854 0.075731 delta 74100736 74100736 total 371032064 371032064
+Write signals (0)-(789453125) time 0.332660 0.329233 0.000000 delta 135168 135168 total 371167232 371167232
+Unload (0)-(789453125) time 0.000175 0.000174 0.000000 delta 0 0 total 371167232 371167232
+au time 0.838145 0.387218 0.091025 delta 105189376 105189376 total 207175680 207175680

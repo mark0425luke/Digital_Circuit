@@ -1,0 +1,42 @@
+
+Initializing...
+lc_shell> read_lib sram_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.lib
+Reading '/home/mark/Digital_Circuit/Row_Buffers/04_MEM/sram_256word_8bit/sram_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.lib' ...
+Warning: Line 65, The 'internal_power_calculation' attribute in char_config group is required for NLPM library. 
+        No default can be applied to this attribute. (LBDB-366)
+Warning: Line 330, Cell 'sram_sp_hde', pin 'CENY', The pin 'CENY' does not have a internal_power group. (LBDB-607)
+Warning: Line 568, Cell 'sram_sp_hde', pin 'WENY', The pin 'WENY' does not have a internal_power group. (LBDB-607)
+Warning: Line 928, Cell 'sram_sp_hde', pin 'AY[7]', The pin 'AY[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1046, Cell 'sram_sp_hde', pin 'AY[6]', The pin 'AY[6]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1164, Cell 'sram_sp_hde', pin 'AY[5]', The pin 'AY[5]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1282, Cell 'sram_sp_hde', pin 'AY[4]', The pin 'AY[4]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1400, Cell 'sram_sp_hde', pin 'AY[3]', The pin 'AY[3]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1518, Cell 'sram_sp_hde', pin 'AY[2]', The pin 'AY[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1636, Cell 'sram_sp_hde', pin 'AY[1]', The pin 'AY[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1754, Cell 'sram_sp_hde', pin 'AY[0]', The pin 'AY[0]' does not have a internal_power group. (LBDB-607)
+Warning: Line 1995, Cell 'sram_sp_hde', pin 'DY[7]', The pin 'DY[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2113, Cell 'sram_sp_hde', pin 'DY[6]', The pin 'DY[6]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2231, Cell 'sram_sp_hde', pin 'DY[5]', The pin 'DY[5]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2349, Cell 'sram_sp_hde', pin 'DY[4]', The pin 'DY[4]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2467, Cell 'sram_sp_hde', pin 'DY[3]', The pin 'DY[3]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2585, Cell 'sram_sp_hde', pin 'DY[2]', The pin 'DY[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2703, Cell 'sram_sp_hde', pin 'DY[1]', The pin 'DY[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 2821, Cell 'sram_sp_hde', pin 'DY[0]', The pin 'DY[0]' does not have a internal_power group. (LBDB-607)
+Warning: Line 6687, Cell 'sram_sp_hde', pin 'EMA[2]', The pin 'EMA[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 6760, Cell 'sram_sp_hde', pin 'EMAW[1]', The pin 'EMAW[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 6833, Cell 'sram_sp_hde', pin 'EMAS', The pin 'EMAS' does not have a internal_power group. (LBDB-607)
+Warning: Line 7397, Cell 'sram_sp_hde', pin 'TQ[7]', The pin 'TQ[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 7404, Cell 'sram_sp_hde', pin 'RET1N', is a 'save_restore' class retention pin but is missing all recommended attributes. (LBDB-982)
+Warning: Line 7569, Cell 'sram_sp_hde', pin 'STOV', The pin 'STOV' does not have a internal_power group. (LBDB-607)
+Technology library 'USERLIB_nldm_tt_0p90v_0p90v_25c' read successfully
+1
+lc_shell> write_lib -format db USERLIB_nldm_tt_0p90v_0p90v_25c -output sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db
+Wrote the 'USERLIB_nldm_tt_0p90v_0p90v_25c' library to '/home/mark/Digital_Circuit/Row_Buffers/04_MEM/sram_256word_8bit/sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db' successfully
+1
+lc_shell> exit
+Maximum memory usage for this session: 76.73 MB
+Maximum memory usage for this session including child processes: 76.73 MB
+CPU usage for this session:      2 seconds (  0.00 hours)
+Elapsed time for this session:     19 seconds (  0.01 hours)
+Thank you for using Library Compiler.
+

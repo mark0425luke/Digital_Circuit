@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Row_Buffers/05_PTPX/File/Row_Buffers_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0,0)-(1,4003470204) time 0.125730 0.959422 0.171268 delta 102203392 102203392 total 399540224 399540224
+Write signals (0,0)-(1,4003470204) time 5.988124 3.843586 0.051741 delta 532480 532480 total 400072704 400072704
+Unload (0,0)-(1,4003470204) time 0.003850 0.001845 0.002001 delta 0 0 total 400072704 400072704
+au time 6.516237 4.834131 0.244067 delta 133828608 133828608 total 235814912 235814912

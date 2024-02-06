@@ -1,0 +1,324 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Nov 28, 2023 at 20:01:57 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Accumulator:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	primitive worklib.udp_dffr3:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lcg:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf2_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_retpwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_or_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out_:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedfft:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_or_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_jkff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_bmx:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedffsr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux4:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_retn_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_o2lvluu_pp_or_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph2p:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_buf_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_a2lvluu_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_outrf:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_and_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr4:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_xprop:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph1p:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffpower:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_always0_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edfft_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out__PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff_ros:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_wao:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mx21:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_plat_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lvl_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_power:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph2p_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out__PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedfft_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_jkff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_retn:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_or_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_csa4to2_carry:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_always1_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ando_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lvl_pp_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedffsr_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_ros:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edfft:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out_:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_oro_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_not_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_plat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph1p_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_xgen:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr1:v
+		errors: 0, warnings: 0
+file: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	module sc9_cln40g_base_rvt_neg.AND2_X0P5B_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.AO22_X0P5M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.BUF_X0P7M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.DFFRPQ_X0P5M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.DFFRPQ_X1M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.INV_X0P5B_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.INV_X1B_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.INV_X2P5B_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.TIEHI_X1M_A9TR:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "Accumulator_SYN.sdf"
+	Writing compiled SDF file to "Accumulator_SYN.sdf.X".
+        .PE(PE),
+             |
+ncelab: *W,CUVMPW (./TESTBED.v,108|13): port sizes differ in port connection (81/27).
+	Annotating SDF timing data:
+		Compiled SDF file:     Accumulator_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Accumulator
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_0_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1237>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_1_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1258>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_2_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1279>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_3_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1300>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_4_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1321>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_5_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1342>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_6_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1363>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_7_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1384>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_8_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1405>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_9_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1426>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_11_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1447>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_12_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1468>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_13_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1489>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_14_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1510>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_15_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1531>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_16_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1552>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_20_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1573>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_22_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1594>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_23_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1615>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_24_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1636>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_26_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 1657>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1678>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1699>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__2_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1720>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__3_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1741>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__4_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1762>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__5_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1783>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__6_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1804>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__7_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1825>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__8_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1846>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__9_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1867>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__10_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1888>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__11_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1909>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__13_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1930>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__14_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1951>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__15_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1972>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__16_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 1993>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__17_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2014>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__18_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2035>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__19_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2056>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__20_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2077>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__21_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2098>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__22_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2119>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__23_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2140>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__24_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2161>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__25_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2182>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__26_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2203>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_21_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2224>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_17_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2245>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_18_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2266>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_19_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2287>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.out_valid_reg of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2308>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_10_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2329>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Accumulator.Accumulator_reg_25_ of module DFFRPQ_X1M_A9TR <./Accumulator_SYN.sdf, line 2350>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.pe_reg_0__12_ of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2371>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.025)) of instance TESTBED.I_Accumulator.cur_state_reg of module DFFRPQ_X0P5M_A9TR <./Accumulator_SYN.sdf, line 2392>.
+	Annotation completed with 0 Errors and 56 Warnings
+	SDF statistics: No. of Pathdelays = 664  Annotated = 100.00% -- No. of Tchecks = 616  Annotated = 27.27% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	         664	         664	      100.00
+		      $width	         448	           0	        0.00
+		     $recrem	          56	          56	      100.00
+		  $setuphold	         112	         112	      100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		sc9_cln40g_base_rvt_neg.AO22_X0P5M_A9TR:v <0x7adaf12c>
+			streams:   0, words:     0
+		sc9_cln40g_base_rvt_neg.DFFRPQ_X0P5M_A9TR:v <0x20f8fd9f>
+			streams:   0, words:     0
+		sc9_cln40g_base_rvt_neg.DFFRPQ_X1M_A9TR:v <0x237062bb>
+			streams:   0, words:     0
+		sc9_cln40g_base_rvt_neg.DFFRPQ_X1M_A9TR:v <0x470a85d1>
+			streams:   0, words:     0
+		worklib.PATTERN:v <0x077373ef>
+			streams:   9, words: 12476
+		worklib.TESTBED:v <0x03488887>
+			streams:   1, words:   712
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                 120      12
+		UDPs:                     56      73
+		Primitives:              339       4
+		Timing outputs:          116       6
+		Registers:                65      53
+		Scalar wires:            908       -
+		Expanded wires:           81       1
+		Always blocks:             1       1
+		Initial blocks:            4       4
+		Cont. assignments:         0      16
+		Timing checks:           784     170
+		Interconnect:            334       -
+		Delayed tcheck signals:  168      58
+		Simulation timescale:    1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'Accumulator_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+  END 
+Simulation complete via $finish(1) at time 1105 NS + 0
+./PATTERN.v:82 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Nov 28, 2023 at 20:02:39 CST  (total: 00:00:42)

@@ -1,0 +1,972 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version Q-2019.12 for linux64 - Nov 26, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#*  Set Libraries
+#todo Select Needed Technology
+#======================================================
+# ? 40nm technology
+set search_path { ./../01_RTL                                                            /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/      			        /usr/cad/synopsys/synthesis/2019.12/libraries/syn/   			        /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ }
+ ./../01_RTL                                                            /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/                 /usr/cad/synopsys/synthesis/2019.12/libraries/syn/              /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+#======================================================
+#*  Global Parameters
+#todo Change Current Design & Clock Period 
+#======================================================
+set DESIGN "Adder_mask"
+Adder_mask
+set CLK_period 26.5625
+26.5625
+# set IN_DLY [expr 0.5*$CLK_period]
+# set OUT_DLY [expr 0.5*$CLK_period]
+set IN_DLY [expr 0*$CLK_period]
+0.0
+set OUT_DLY [expr 0*$CLK_period]
+0.0
+set hdlin_ff_always_sync_set_reset true
+true
+#======================================================
+#*  Read RTL Code
+#todo Change Needed Design.sv, Package.sv, Interface.sv
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog {$DESIGN\.v}
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c'
+  Loading link library 'gtech'
+Loading sverilog file '/home/mark/Digital_Circuit/Adder_mask/01_RTL/Adder_mask.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mark/Digital_Circuit/Adder_mask/01_RTL/Adder_mask.v
+
+Inferred memory devices in process
+	in routine Adder_mask line 83 in file
+		'/home/mark/Digital_Circuit/Adder_mask/01_RTL/Adder_mask.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   adder_mask_reg    | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mark/Digital_Circuit/Adder_mask/01_RTL/Adder_mask.db:Adder_mask'
+Loaded 1 design.
+Current design is 'Adder_mask'.
+Adder_mask
+current_design $DESIGN
+Current design is 'Adder_mask'.
+{Adder_mask}
+#======================================================
+#*  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#*  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk
+1
+set_ideal_net clk
+Information: It is recommended to use set_ideal_network command instead of set_ideal_net. (UID-604)
+Warning: Replacing set_ideal_net command with set_ideal_network -no_propagate command. (UID-605)
+Warning: Transferring ideal_net attribute onto the driver pin clk of net clk. (UID-606)
+1
+set_input_delay $IN_DLY -clock clk [all_inputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_output_delay $OUT_DLY -clock clk [all_outputs]
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#*  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'Adder_mask'
+
+Loaded alib file './alib-52/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Adder_mask'
+Information: Added key list 'DesignWare' to design 'Adder_mask'. (DDB-72)
+Information: The register 'adder_mask_reg[1][0]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TR' in the library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TR' in the library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'adder_mask_reg[15][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[15][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[14][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[13][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[12][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[11][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[10][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[9][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[7][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[5][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'adder_mask_reg[2][1]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design Adder_mask. Delay-based auto_ungroup will not be performed. (OPT-780)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:16    2425.9      0.00       0.0       1.0                             22.9615      0.00  
+    0:00:16    2425.9      0.00       0.0       1.0                             22.9615      0.00  
+    0:00:16    2425.9      0.00       0.0       1.0                             22.9615      0.00  
+    0:00:16    2425.9      0.00       0.0       1.0                             22.9615      0.00  
+MAPPED_RR: alt Adder_mask out of 2265 cells,  passing 1727 cells to ABO for mapped RR
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+MAPPED_RR: alt Adder_mask out of 2265 cells,  passing 1727 cells to ABO for mapped RR
+    0:00:16    2424.5      0.00       0.0       1.0                             22.8049      0.00  
+    0:00:16    2424.5      0.00       0.0       1.0                             22.8049      0.00  
+    0:00:16    2424.5      0.00       0.0       1.0                             22.8049      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:17    2424.5      0.00       0.0       0.3                             16.5459      0.00  
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:17    2424.5      0.00       0.0       0.0                             16.5819      0.00  
+    0:00:17    2424.5      0.00       0.0       0.0                             16.5819      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:17    2424.5      0.00       0.0       0.0                             16.5819      0.00  
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0579      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0579      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0579      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2424.5      0.00       0.0       0.0                             15.0303      0.00  
+    0:00:18    2488.4      0.00       0.0       1.5                             15.4887      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:18    2488.4      0.00       0.0       1.5                             15.4887      0.00  
+    0:00:19    2963.4      0.00       0.0       1.5                             23.9260      0.00  
+    0:00:19    2963.4      0.00       0.0       1.5                             23.9260      0.00  
+    0:00:19    2963.4      0.00       0.0       1.5                             23.9260      0.00  
+    0:00:19    2487.1      0.00       0.0       1.5                             15.4829      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2572.1      0.00       0.0       0.0                             16.1264      0.00  
+    0:00:21    2571.7      0.00       0.0       0.0                             16.1321      0.00  
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#*  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#*  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#*  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/mark/Digital_Circuit/Adder_mask/02_SYN/Netlist/Adder_mask_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf
+Information: Writing timing information to file '/home/mark/Digital_Circuit/Adder_mask/02_SYN/Netlist/Adder_mask_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#*  Finish and Quit
+#======================================================
+report_resource
+ 
+****************************************
+Report : resources
+Design : Adder_mask
+Version: Q-2019.12
+Date   : Wed Jan 10 18:15:15 2024
+****************************************
+
+
+Resource Report for this hierarchy in file
+        /home/mark/Digital_Circuit/Adder_mask/01_RTL/Adder_mask.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| eq_x_138       | DW_cmp         | width=9    | eq_63_I2 (Adder_mask.v:63) |
+|                |                |            | eq_63_I2_I1 (Adder_mask.v:63) |
+| eq_x_139       | DW_cmp         | width=9    | eq_63_I3 (Adder_mask.v:63) |
+|                |                |            | eq_63_I3_I1 (Adder_mask.v:63) |
+| eq_x_140       | DW_cmp         | width=9    | eq_63_I4 (Adder_mask.v:63) |
+|                |                |            | eq_63_I4_I1 (Adder_mask.v:63) |
+| eq_x_141       | DW_cmp         | width=9    | eq_63_I5 (Adder_mask.v:63) |
+|                |                |            | eq_63_I5_I1 (Adder_mask.v:63) |
+| eq_x_142       | DW_cmp         | width=9    | eq_63_I6 (Adder_mask.v:63) |
+|                |                |            | eq_63_I6_I1 (Adder_mask.v:63) |
+| eq_x_143       | DW_cmp         | width=9    | eq_63_I7 (Adder_mask.v:63) |
+|                |                |            | eq_63_I7_I1 (Adder_mask.v:63) |
+| eq_x_144       | DW_cmp         | width=9    | eq_63_I8 (Adder_mask.v:63) |
+|                |                |            | eq_63_I8_I1 (Adder_mask.v:63) |
+| eq_x_145       | DW_cmp         | width=9    | eq_63_I9 (Adder_mask.v:63) |
+|                |                |            | eq_63_I9_I1 (Adder_mask.v:63) |
+| eq_x_146       | DW_cmp         | width=9    | eq_63_I10 (Adder_mask.v:63) |
+                |                |            | eq_63_I10_I1 (Adder_mask.v:63) |
+| eq_x_147       | DW_cmp         | width=9    | eq_63_I11 (Adder_mask.v:63) |
+                |                |            | eq_63_I11_I1 (Adder_mask.v:63) |
+| eq_x_148       | DW_cmp         | width=9    | eq_63_I12 (Adder_mask.v:63) |
+                |                |            | eq_63_I12_I1 (Adder_mask.v:63) |
+| eq_x_149       | DW_cmp         | width=9    | eq_63_I13 (Adder_mask.v:63) |
+                |                |            | eq_63_I13_I1 (Adder_mask.v:63) |
+| eq_x_150       | DW_cmp         | width=9    | eq_63_I14 (Adder_mask.v:63) |
+                |                |            | eq_63_I14_I1 (Adder_mask.v:63) |
+| eq_x_151       | DW_cmp         | width=9    | eq_63_I15 (Adder_mask.v:63) |
+                |                |            | eq_63_I15_I1 (Adder_mask.v:63) |
+| eq_x_152       | DW_cmp         | width=9    | eq_63_I16 (Adder_mask.v:63) |
+                |                |            | eq_63_I16_I1 (Adder_mask.v:63) |
+| eq_x_153       | DW_cmp         | width=9    | eq_63_I2_I3 (Adder_mask.v:63) |
+              |                |            | eq_63_I3_I2 (Adder_mask.v:63) |
+| eq_x_154       | DW_cmp         | width=9    | eq_63_I2_I4 (Adder_mask.v:63) |
+              |                |            | eq_63_I4_I2 (Adder_mask.v:63) |
+| eq_x_155       | DW_cmp         | width=9    | eq_63_I2_I5 (Adder_mask.v:63) |
+              |                |            | eq_63_I5_I2 (Adder_mask.v:63) |
+| eq_x_156       | DW_cmp         | width=9    | eq_63_I2_I6 (Adder_mask.v:63) |
+              |                |            | eq_63_I6_I2 (Adder_mask.v:63) |
+| eq_x_157       | DW_cmp         | width=9    | eq_63_I2_I7 (Adder_mask.v:63) |
+              |                |            | eq_63_I7_I2 (Adder_mask.v:63) |
+| eq_x_158       | DW_cmp         | width=9    | eq_63_I2_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I2 (Adder_mask.v:63) |
+| eq_x_159       | DW_cmp         | width=9    | eq_63_I2_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I2 (Adder_mask.v:63) |
+| eq_x_160       | DW_cmp         | width=9    | eq_63_I10_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I10 (Adder_mask.v:63) |
+| eq_x_161       | DW_cmp         | width=9    | eq_63_I11_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I11 (Adder_mask.v:63) |
+| eq_x_162       | DW_cmp         | width=9    | eq_63_I12_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I12 (Adder_mask.v:63) |
+| eq_x_163       | DW_cmp         | width=9    | eq_63_I13_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I13 (Adder_mask.v:63) |
+| eq_x_164       | DW_cmp         | width=9    | eq_63_I14_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I14 (Adder_mask.v:63) |
+| eq_x_165       | DW_cmp         | width=9    | eq_63_I15_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I15 (Adder_mask.v:63) |
+| eq_x_166       | DW_cmp         | width=9    | eq_63_I16_I2 (Adder_mask.v:63) |
+             |                |            | eq_63_I2_I16 (Adder_mask.v:63) |
+| eq_x_167       | DW_cmp         | width=9    | eq_63_I3_I4 (Adder_mask.v:63) |
+              |                |            | eq_63_I4_I3 (Adder_mask.v:63) |
+| eq_x_168       | DW_cmp         | width=9    | eq_63_I3_I5 (Adder_mask.v:63) |
+              |                |            | eq_63_I5_I3 (Adder_mask.v:63) |
+| eq_x_169       | DW_cmp         | width=9    | eq_63_I3_I6 (Adder_mask.v:63) |
+              |                |            | eq_63_I6_I3 (Adder_mask.v:63) |
+| eq_x_170       | DW_cmp         | width=9    | eq_63_I3_I7 (Adder_mask.v:63) |
+              |                |            | eq_63_I7_I3 (Adder_mask.v:63) |
+| eq_x_171       | DW_cmp         | width=9    | eq_63_I3_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I3 (Adder_mask.v:63) |
+| eq_x_172       | DW_cmp         | width=9    | eq_63_I3_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I3 (Adder_mask.v:63) |
+| eq_x_173       | DW_cmp         | width=9    | eq_63_I10_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I10 (Adder_mask.v:63) |
+| eq_x_174       | DW_cmp         | width=9    | eq_63_I11_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I11 (Adder_mask.v:63) |
+| eq_x_175       | DW_cmp         | width=9    | eq_63_I12_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I12 (Adder_mask.v:63) |
+| eq_x_176       | DW_cmp         | width=9    | eq_63_I13_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I13 (Adder_mask.v:63) |
+| eq_x_177       | DW_cmp         | width=9    | eq_63_I14_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I14 (Adder_mask.v:63) |
+| eq_x_178       | DW_cmp         | width=9    | eq_63_I15_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I15 (Adder_mask.v:63) |
+| eq_x_179       | DW_cmp         | width=9    | eq_63_I16_I3 (Adder_mask.v:63) |
+             |                |            | eq_63_I3_I16 (Adder_mask.v:63) |
+| eq_x_180       | DW_cmp         | width=9    | eq_63_I4_I5 (Adder_mask.v:63) |
+              |                |            | eq_63_I5_I4 (Adder_mask.v:63) |
+| eq_x_181       | DW_cmp         | width=9    | eq_63_I4_I6 (Adder_mask.v:63) |
+              |                |            | eq_63_I6_I4 (Adder_mask.v:63) |
+| eq_x_182       | DW_cmp         | width=9    | eq_63_I4_I7 (Adder_mask.v:63) |
+              |                |            | eq_63_I7_I4 (Adder_mask.v:63) |
+| eq_x_183       | DW_cmp         | width=9    | eq_63_I4_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I4 (Adder_mask.v:63) |
+| eq_x_184       | DW_cmp         | width=9    | eq_63_I4_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I4 (Adder_mask.v:63) |
+| eq_x_185       | DW_cmp         | width=9    | eq_63_I10_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I10 (Adder_mask.v:63) |
+| eq_x_186       | DW_cmp         | width=9    | eq_63_I11_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I11 (Adder_mask.v:63) |
+| eq_x_187       | DW_cmp         | width=9    | eq_63_I12_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I12 (Adder_mask.v:63) |
+| eq_x_188       | DW_cmp         | width=9    | eq_63_I13_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I13 (Adder_mask.v:63) |
+| eq_x_189       | DW_cmp         | width=9    | eq_63_I14_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I14 (Adder_mask.v:63) |
+| eq_x_190       | DW_cmp         | width=9    | eq_63_I15_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I15 (Adder_mask.v:63) |
+| eq_x_191       | DW_cmp         | width=9    | eq_63_I16_I4 (Adder_mask.v:63) |
+             |                |            | eq_63_I4_I16 (Adder_mask.v:63) |
+| eq_x_192       | DW_cmp         | width=9    | eq_63_I5_I6 (Adder_mask.v:63) |
+              |                |            | eq_63_I6_I5 (Adder_mask.v:63) |
+| eq_x_193       | DW_cmp         | width=9    | eq_63_I5_I7 (Adder_mask.v:63) |
+              |                |            | eq_63_I7_I5 (Adder_mask.v:63) |
+| eq_x_194       | DW_cmp         | width=9    | eq_63_I5_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I5 (Adder_mask.v:63) |
+| eq_x_195       | DW_cmp         | width=9    | eq_63_I5_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I5 (Adder_mask.v:63) |
+| eq_x_196       | DW_cmp         | width=9    | eq_63_I10_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I10 (Adder_mask.v:63) |
+| eq_x_197       | DW_cmp         | width=9    | eq_63_I11_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I11 (Adder_mask.v:63) |
+| eq_x_198       | DW_cmp         | width=9    | eq_63_I12_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I12 (Adder_mask.v:63) |
+| eq_x_199       | DW_cmp         | width=9    | eq_63_I13_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I13 (Adder_mask.v:63) |
+| eq_x_200       | DW_cmp         | width=9    | eq_63_I14_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I14 (Adder_mask.v:63) |
+| eq_x_201       | DW_cmp         | width=9    | eq_63_I15_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I15 (Adder_mask.v:63) |
+| eq_x_202       | DW_cmp         | width=9    | eq_63_I16_I5 (Adder_mask.v:63) |
+             |                |            | eq_63_I5_I16 (Adder_mask.v:63) |
+| eq_x_203       | DW_cmp         | width=9    | eq_63_I6_I7 (Adder_mask.v:63) |
+              |                |            | eq_63_I7_I6 (Adder_mask.v:63) |
+| eq_x_204       | DW_cmp         | width=9    | eq_63_I6_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I6 (Adder_mask.v:63) |
+| eq_x_205       | DW_cmp         | width=9    | eq_63_I6_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I6 (Adder_mask.v:63) |
+| eq_x_206       | DW_cmp         | width=9    | eq_63_I10_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I10 (Adder_mask.v:63) |
+| eq_x_207       | DW_cmp         | width=9    | eq_63_I11_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I11 (Adder_mask.v:63) |
+| eq_x_208       | DW_cmp         | width=9    | eq_63_I12_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I12 (Adder_mask.v:63) |
+| eq_x_209       | DW_cmp         | width=9    | eq_63_I13_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I13 (Adder_mask.v:63) |
+| eq_x_210       | DW_cmp         | width=9    | eq_63_I14_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I14 (Adder_mask.v:63) |
+| eq_x_211       | DW_cmp         | width=9    | eq_63_I15_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I15 (Adder_mask.v:63) |
+| eq_x_212       | DW_cmp         | width=9    | eq_63_I16_I6 (Adder_mask.v:63) |
+             |                |            | eq_63_I6_I16 (Adder_mask.v:63) |
+| eq_x_213       | DW_cmp         | width=9    | eq_63_I7_I8 (Adder_mask.v:63) |
+              |                |            | eq_63_I8_I7 (Adder_mask.v:63) |
+| eq_x_214       | DW_cmp         | width=9    | eq_63_I7_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I7 (Adder_mask.v:63) |
+| eq_x_215       | DW_cmp         | width=9    | eq_63_I10_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I10 (Adder_mask.v:63) |
+| eq_x_216       | DW_cmp         | width=9    | eq_63_I11_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I11 (Adder_mask.v:63) |
+| eq_x_217       | DW_cmp         | width=9    | eq_63_I12_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I12 (Adder_mask.v:63) |
+| eq_x_218       | DW_cmp         | width=9    | eq_63_I13_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I13 (Adder_mask.v:63) |
+| eq_x_219       | DW_cmp         | width=9    | eq_63_I14_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I14 (Adder_mask.v:63) |
+| eq_x_220       | DW_cmp         | width=9    | eq_63_I15_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I15 (Adder_mask.v:63) |
+| eq_x_221       | DW_cmp         | width=9    | eq_63_I16_I7 (Adder_mask.v:63) |
+             |                |            | eq_63_I7_I16 (Adder_mask.v:63) |
+| eq_x_222       | DW_cmp         | width=9    | eq_63_I8_I9 (Adder_mask.v:63) |
+              |                |            | eq_63_I9_I8 (Adder_mask.v:63) |
+| eq_x_223       | DW_cmp         | width=9    | eq_63_I10_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I10 (Adder_mask.v:63) |
+| eq_x_224       | DW_cmp         | width=9    | eq_63_I11_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I11 (Adder_mask.v:63) |
+| eq_x_225       | DW_cmp         | width=9    | eq_63_I12_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I12 (Adder_mask.v:63) |
+| eq_x_226       | DW_cmp         | width=9    | eq_63_I13_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I13 (Adder_mask.v:63) |
+| eq_x_227       | DW_cmp         | width=9    | eq_63_I14_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I14 (Adder_mask.v:63) |
+| eq_x_228       | DW_cmp         | width=9    | eq_63_I15_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I15 (Adder_mask.v:63) |
+| eq_x_229       | DW_cmp         | width=9    | eq_63_I16_I8 (Adder_mask.v:63) |
+             |                |            | eq_63_I8_I16 (Adder_mask.v:63) |
+| eq_x_230       | DW_cmp         | width=9    | eq_63_I10_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I10 (Adder_mask.v:63) |
+| eq_x_231       | DW_cmp         | width=9    | eq_63_I11_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I11 (Adder_mask.v:63) |
+| eq_x_232       | DW_cmp         | width=9    | eq_63_I12_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I12 (Adder_mask.v:63) |
+| eq_x_233       | DW_cmp         | width=9    | eq_63_I13_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I13 (Adder_mask.v:63) |
+| eq_x_234       | DW_cmp         | width=9    | eq_63_I14_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I14 (Adder_mask.v:63) |
+| eq_x_235       | DW_cmp         | width=9    | eq_63_I15_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I15 (Adder_mask.v:63) |
+| eq_x_236       | DW_cmp         | width=9    | eq_63_I16_I9 (Adder_mask.v:63) |
+             |                |            | eq_63_I9_I16 (Adder_mask.v:63) |
+| eq_x_237       | DW_cmp         | width=9    | eq_63_I10_I11 (Adder_mask.v:63) |
+            |                |            | eq_63_I11_I10 (Adder_mask.v:63) |
+| eq_x_238       | DW_cmp         | width=9    | eq_63_I10_I12 (Adder_mask.v:63) |
+            |                |            | eq_63_I12_I10 (Adder_mask.v:63) |
+| eq_x_239       | DW_cmp         | width=9    | eq_63_I10_I13 (Adder_mask.v:63) |
+            |                |            | eq_63_I13_I10 (Adder_mask.v:63) |
+| eq_x_240       | DW_cmp         | width=9    | eq_63_I10_I14 (Adder_mask.v:63) |
+            |                |            | eq_63_I14_I10 (Adder_mask.v:63) |
+| eq_x_241       | DW_cmp         | width=9    | eq_63_I10_I15 (Adder_mask.v:63) |
+            |                |            | eq_63_I15_I10 (Adder_mask.v:63) |
+| eq_x_242       | DW_cmp         | width=9    | eq_63_I10_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I10 (Adder_mask.v:63) |
+| eq_x_243       | DW_cmp         | width=9    | eq_63_I11_I12 (Adder_mask.v:63) |
+            |                |            | eq_63_I12_I11 (Adder_mask.v:63) |
+| eq_x_244       | DW_cmp         | width=9    | eq_63_I11_I13 (Adder_mask.v:63) |
+            |                |            | eq_63_I13_I11 (Adder_mask.v:63) |
+| eq_x_245       | DW_cmp         | width=9    | eq_63_I11_I14 (Adder_mask.v:63) |
+            |                |            | eq_63_I14_I11 (Adder_mask.v:63) |
+| eq_x_246       | DW_cmp         | width=9    | eq_63_I11_I15 (Adder_mask.v:63) |
+            |                |            | eq_63_I15_I11 (Adder_mask.v:63) |
+| eq_x_247       | DW_cmp         | width=9    | eq_63_I11_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I11 (Adder_mask.v:63) |
+| eq_x_248       | DW_cmp         | width=9    | eq_63_I12_I13 (Adder_mask.v:63) |
+            |                |            | eq_63_I13_I12 (Adder_mask.v:63) |
+| eq_x_249       | DW_cmp         | width=9    | eq_63_I12_I14 (Adder_mask.v:63) |
+            |                |            | eq_63_I14_I12 (Adder_mask.v:63) |
+| eq_x_250       | DW_cmp         | width=9    | eq_63_I12_I15 (Adder_mask.v:63) |
+            |                |            | eq_63_I15_I12 (Adder_mask.v:63) |
+| eq_x_251       | DW_cmp         | width=9    | eq_63_I12_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I12 (Adder_mask.v:63) |
+| eq_x_252       | DW_cmp         | width=9    | eq_63_I13_I14 (Adder_mask.v:63) |
+            |                |            | eq_63_I14_I13 (Adder_mask.v:63) |
+| eq_x_253       | DW_cmp         | width=9    | eq_63_I13_I15 (Adder_mask.v:63) |
+            |                |            | eq_63_I15_I13 (Adder_mask.v:63) |
+| eq_x_254       | DW_cmp         | width=9    | eq_63_I13_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I13 (Adder_mask.v:63) |
+| eq_x_255       | DW_cmp         | width=9    | eq_63_I14_I15 (Adder_mask.v:63) |
+            |                |            | eq_63_I15_I14 (Adder_mask.v:63) |
+| eq_x_256       | DW_cmp         | width=9    | eq_63_I14_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I14 (Adder_mask.v:63) |
+| eq_x_257       | DW_cmp         | width=9    | eq_63_I15_I16 (Adder_mask.v:63) |
+            |                |            | eq_63_I16_I15 (Adder_mask.v:63) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| eq_x_138           | DW_cmp           | apparch (area)     |                |
+| eq_x_139           | DW_cmp           | apparch (area)     |                |
+| eq_x_140           | DW_cmp           | apparch (area)     |                |
+| eq_x_141           | DW_cmp           | apparch (area)     |                |
+| eq_x_142           | DW_cmp           | apparch (area)     |                |
+| eq_x_143           | DW_cmp           | apparch (area)     |                |
+| eq_x_144           | DW_cmp           | apparch (area)     |                |
+| eq_x_145           | DW_cmp           | apparch (area)     |                |
+| eq_x_146           | DW_cmp           | apparch (area)     |                |
+| eq_x_147           | DW_cmp           | apparch (area)     |                |
+| eq_x_148           | DW_cmp           | apparch (area)     |                |
+| eq_x_149           | DW_cmp           | apparch (area)     |                |
+| eq_x_150           | DW_cmp           | apparch (area)     |                |
+| eq_x_151           | DW_cmp           | apparch (area)     |                |
+| eq_x_152           | DW_cmp           | apparch (area)     |                |
+| eq_x_153           | DW_cmp           | apparch (area)     |                |
+| eq_x_154           | DW_cmp           | apparch (area)     |                |
+| eq_x_155           | DW_cmp           | apparch (area)     |                |
+| eq_x_156           | DW_cmp           | apparch (area)     |                |
+| eq_x_157           | DW_cmp           | apparch (area)     |                |
+| eq_x_158           | DW_cmp           | apparch (area)     |                |
+| eq_x_159           | DW_cmp           | apparch (area)     |                |
+| eq_x_160           | DW_cmp           | apparch (area)     |                |
+| eq_x_161           | DW_cmp           | apparch (area)     |                |
+| eq_x_162           | DW_cmp           | apparch (area)     |                |
+| eq_x_163           | DW_cmp           | apparch (area)     |                |
+| eq_x_164           | DW_cmp           | apparch (area)     |                |
+| eq_x_165           | DW_cmp           | apparch (area)     |                |
+| eq_x_166           | DW_cmp           | apparch (area)     |                |
+| eq_x_167           | DW_cmp           | apparch (area)     |                |
+| eq_x_168           | DW_cmp           | apparch (area)     |                |
+| eq_x_169           | DW_cmp           | apparch (area)     |                |
+| eq_x_170           | DW_cmp           | apparch (area)     |                |
+| eq_x_171           | DW_cmp           | apparch (area)     |                |
+| eq_x_172           | DW_cmp           | apparch (area)     |                |
+| eq_x_173           | DW_cmp           | apparch (area)     |                |
+| eq_x_174           | DW_cmp           | apparch (area)     |                |
+| eq_x_175           | DW_cmp           | apparch (area)     |                |
+| eq_x_176           | DW_cmp           | apparch (area)     |                |
+| eq_x_177           | DW_cmp           | apparch (area)     |                |
+| eq_x_178           | DW_cmp           | apparch (area)     |                |
+| eq_x_179           | DW_cmp           | apparch (area)     |                |
+| eq_x_180           | DW_cmp           | apparch (area)     |                |
+| eq_x_181           | DW_cmp           | apparch (area)     |                |
+| eq_x_182           | DW_cmp           | apparch (area)     |                |
+| eq_x_183           | DW_cmp           | apparch (area)     |                |
+| eq_x_184           | DW_cmp           | apparch (area)     |                |
+| eq_x_185           | DW_cmp           | apparch (area)     |                |
+| eq_x_186           | DW_cmp           | apparch (area)     |                |
+| eq_x_187           | DW_cmp           | apparch (area)     |                |
+| eq_x_188           | DW_cmp           | apparch (area)     |                |
+| eq_x_189           | DW_cmp           | apparch (area)     |                |
+| eq_x_190           | DW_cmp           | apparch (area)     |                |
+| eq_x_191           | DW_cmp           | apparch (area)     |                |
+| eq_x_192           | DW_cmp           | apparch (area)     |                |
+| eq_x_193           | DW_cmp           | apparch (area)     |                |
+| eq_x_194           | DW_cmp           | apparch (area)     |                |
+| eq_x_195           | DW_cmp           | apparch (area)     |                |
+| eq_x_196           | DW_cmp           | apparch (area)     |                |
+| eq_x_197           | DW_cmp           | apparch (area)     |                |
+| eq_x_198           | DW_cmp           | apparch (area)     |                |
+| eq_x_199           | DW_cmp           | apparch (area)     |                |
+| eq_x_200           | DW_cmp           | apparch (area)     |                |
+| eq_x_201           | DW_cmp           | apparch (area)     |                |
+| eq_x_202           | DW_cmp           | apparch (area)     |                |
+| eq_x_203           | DW_cmp           | apparch (area)     |                |
+| eq_x_204           | DW_cmp           | apparch (area)     |                |
+| eq_x_205           | DW_cmp           | apparch (area)     |                |
+| eq_x_206           | DW_cmp           | apparch (area)     |                |
+| eq_x_207           | DW_cmp           | apparch (area)     |                |
+| eq_x_208           | DW_cmp           | apparch (area)     |                |
+| eq_x_209           | DW_cmp           | apparch (area)     |                |
+| eq_x_210           | DW_cmp           | apparch (area)     |                |
+| eq_x_211           | DW_cmp           | apparch (area)     |                |
+| eq_x_212           | DW_cmp           | apparch (area)     |                |
+| eq_x_213           | DW_cmp           | apparch (area)     |                |
+| eq_x_214           | DW_cmp           | apparch (area)     |                |
+| eq_x_215           | DW_cmp           | apparch (area)     |                |
+| eq_x_216           | DW_cmp           | apparch (area)     |                |
+| eq_x_217           | DW_cmp           | apparch (area)     |                |
+| eq_x_218           | DW_cmp           | apparch (area)     |                |
+| eq_x_219           | DW_cmp           | apparch (area)     |                |
+| eq_x_220           | DW_cmp           | apparch (area)     |                |
+| eq_x_221           | DW_cmp           | apparch (area)     |                |
+| eq_x_222           | DW_cmp           | apparch (area)     |                |
+| eq_x_223           | DW_cmp           | apparch (area)     |                |
+| eq_x_224           | DW_cmp           | apparch (area)     |                |
+| eq_x_225           | DW_cmp           | apparch (area)     |                |
+| eq_x_226           | DW_cmp           | apparch (area)     |                |
+| eq_x_227           | DW_cmp           | apparch (area)     |                |
+| eq_x_228           | DW_cmp           | apparch (area)     |                |
+| eq_x_229           | DW_cmp           | apparch (area)     |                |
+| eq_x_230           | DW_cmp           | apparch (area)     |                |
+| eq_x_231           | DW_cmp           | apparch (area)     |                |
+| eq_x_232           | DW_cmp           | apparch (area)     |                |
+| eq_x_233           | DW_cmp           | apparch (area)     |                |
+| eq_x_234           | DW_cmp           | apparch (area)     |                |
+| eq_x_235           | DW_cmp           | apparch (area)     |                |
+| eq_x_236           | DW_cmp           | apparch (area)     |                |
+| eq_x_237           | DW_cmp           | apparch (area)     |                |
+| eq_x_238           | DW_cmp           | apparch (area)     |                |
+| eq_x_239           | DW_cmp           | apparch (area)     |                |
+| eq_x_240           | DW_cmp           | apparch (area)     |                |
+| eq_x_241           | DW_cmp           | apparch (area)     |                |
+| eq_x_242           | DW_cmp           | apparch (area)     |                |
+| eq_x_243           | DW_cmp           | apparch (area)     |                |
+| eq_x_244           | DW_cmp           | apparch (area)     |                |
+| eq_x_245           | DW_cmp           | apparch (area)     |                |
+| eq_x_246           | DW_cmp           | apparch (area)     |                |
+| eq_x_247           | DW_cmp           | apparch (area)     |                |
+| eq_x_248           | DW_cmp           | apparch (area)     |                |
+| eq_x_249           | DW_cmp           | apparch (area)     |                |
+| eq_x_250           | DW_cmp           | apparch (area)     |                |
+| eq_x_251           | DW_cmp           | apparch (area)     |                |
+| eq_x_252           | DW_cmp           | apparch (area)     |                |
+| eq_x_253           | DW_cmp           | apparch (area)     |                |
+| eq_x_254           | DW_cmp           | apparch (area)     |                |
+| eq_x_255           | DW_cmp           | apparch (area)     |                |
+| eq_x_256           | DW_cmp           | apparch (area)     |                |
+| eq_x_257           | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Adder_mask
+Version: Q-2019.12
+Date   : Wed Jan 10 18:15:15 2024
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: WHICH_FILTER[68]
+              (input port clocked by clk)
+  Endpoint: adder_mask_reg_9__14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Adder_mask         Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  WHICH_FILTER[68] (in)                                   0.00       0.00 f
+  U2129/Y (INV_X0P5B_A9TR)                                0.19       0.19 r
+  U3148/Y (AOI22_X0P5M_A9TR)                              0.09       0.28 f
+  U3152/Y (NAND4_X0P5M_A9TR)                              0.07       0.35 r
+  U3153/Y (NOR3_X0P5A_A9TR)                               0.04       0.39 f
+  U3157/Y (NAND4_X0P5M_A9TR)                              0.07       0.45 r
+  U1939/Y (NAND4_X0P5M_A9TR)                              0.06       0.51 f
+  U1933/Y (NAND4BB_X0P5M_A9TR)                            0.07       0.58 f
+  U1890/Y (NOR3_X0P5A_A9TR)                               0.11       0.69 r
+  U3676/Y (INV_X0P5B_A9TR)                                0.11       0.80 f
+  U1848/Y (NOR2_X0P5A_A9TR)                               0.08       0.88 r
+  adder_mask_reg_9__14_/D (DFFRPQ_X1M_A9TR)               0.00       0.89 r
+  data arrival time                                                  0.89
+
+  clock clk (rise edge)                                  26.56      26.56
+  clock network delay (ideal)                             0.00      26.56
+  adder_mask_reg_9__14_/CK (DFFRPQ_X1M_A9TR)              0.00      26.56 r
+  library setup time                                     -0.03      26.53
+  data required time                                                26.53
+  --------------------------------------------------------------------------
+  data required time                                                26.53
+  data arrival time                                                 -0.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                       25.64
+
+
+1
+report_area
+ 
+****************************************
+Report : area
+Design : Adder_mask
+Version: Q-2019.12
+Date   : Wed Jan 10 18:15:15 2024
+****************************************
+
+Library(s) Used:
+
+    sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c (File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db)
+
+Number of ports:                          402
+Number of nets:                          2273
+Number of cells:                         2127
+Number of combinational cells:           1991
+Number of sequential cells:               136
+Number of macros/black boxes:               0
+Number of buf/inv:                        430
+Number of references:                      22
+
+Combinational area:               1954.789127
+Buf/Inv area:                      224.305198
+Noncombinational area:             616.895969
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  2571.685096
+Total area:                       2571.685096
+1
+exit
+
+Thank you...

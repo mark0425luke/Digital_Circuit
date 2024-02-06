@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Adder_mask/04_PTPX/File/Adder_mask_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0,0)-(5,2710319770) time 0.100369 0.763842 0.201403 delta 90791936 90791936 total 388186112 388186112
+Write signals (0,0)-(5,2710319770) time 2.998461 1.656382 0.015551 delta 536576 536576 total 388722688 388722688
+Unload (0,0)-(5,2710319770) time 0.003262 0.003238 0.000024 delta 0 0 total 388722688 388722688
+au time 3.675891 2.468797 0.238454 delta 117809152 117809152 total 219795456 219795456

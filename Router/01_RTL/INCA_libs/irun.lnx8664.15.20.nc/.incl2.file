@@ -1,0 +1,6 @@
+PATTERN.v
+/home/mark/Digital_Circuit/Router/00_TESTBED/PATTERN.v
+Router.v
+/home/mark/Digital_Circuit/Router/01_RTL/Router.v
+Router_FIFO.v
+/home/mark/Digital_Circuit/Router/01_RTL/Router_FIFO.v

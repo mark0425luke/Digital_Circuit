@@ -1,0 +1,78 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/Router/04_PTPX/File/Router_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 265904ns)
+
+Information: Total simulation time = 265903.906250 ns
+****************************************
+Report : Time Based Power
+	-verbose
+Design : Router
+Version: Q-2019.12
+Date   : Thu Dec 21 03:00:44 2023
+****************************************
+
+Sampling Interval: 1 ns
+
+Library(s) Used:
+
+    dw_foundation.sldb (File: /usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb)
+    standard.sldb (File: /usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb)
+    sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c (File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db)
+
+
+Operating Conditions: nom_pvt   Library: dw_foundation.sldb
+Wire Load Model Mode: top
+
+Cell               Design       Wire_model  Library       Selection_type
+--------------------------------------------------------------------------------
+                   Router       Small       sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+                                                          user-specified
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 1 pf
+    Time Units = 1 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                6.110e-05 9.569e-09 1.221e-05 7.332e-05 (92.62%)  i
+combinational           1.452e-08 5.702e-09 5.819e-06 5.840e-06 ( 7.38%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.527e-08   ( 0.02%)
+  Cell Internal Power  = 6.111e-05   (77.21%)
+  Cell Leakage Power   = 1.803e-05   (22.77%)
+    Intrinsic Leakage  = 1.803e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 7.916e-05  (100.00%)
+
+X Transition Power     = 2.279e-08
+Glitching Power        =    0.0000
+
+Peak Power             = 1.822e-03
+Peak Time              =       159
+
+1

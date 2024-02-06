@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Decoder
+Version: Q-2019.12
+Date   : Wed Jan 31 18:19:45 2024
+****************************************
+
+Library(s) Used:
+
+    sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c (File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db)
+
+Number of ports:                           74
+Number of nets:                           193
+Number of cells:                          184
+Number of combinational cells:            112
+Number of sequential cells:                72
+Number of macros/black boxes:               0
+Number of buf/inv:                          7
+Number of references:                      13
+
+Combinational area:                 77.565601
+Buf/Inv area:                        3.628800
+Noncombinational area:             326.591984
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                   404.157585
+Total area:                        404.157585
+1

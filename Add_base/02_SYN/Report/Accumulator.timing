@@ -1,0 +1,79 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Accumulator
+Version: Q-2019.12
+Date   : Wed Dec 20 03:42:20 2023
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: pe_reg[1][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Accumulator_reg[27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Accumulator        Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pe_reg[1][0]/CK (DFFRPQ_X0P5M_A9TR)                     0.00       0.00 r
+  pe_reg[1][0]/Q (DFFRPQ_X0P5M_A9TR)                      0.10       0.10 f
+  U281/Y (AND2_X0P5B_A9TR)                                0.07       0.17 f
+  U282/Y (OA1B2_X0P5M_A9TR)                               0.07       0.24 r
+  U291/CO (ADDF_X1M_A9TR)                                 0.08       0.32 r
+  U297/CO (CGEN_X1M_A9TR)                                 0.07       0.39 r
+  U301/CO (ADDF_X1M_A9TR)                                 0.06       0.45 r
+  intadd_0/U26/CO (ADDF_X1M_A9TR)                         0.06       0.51 r
+  intadd_0/U25/CO (ADDF_X1M_A9TR)                         0.06       0.56 r
+  intadd_0/U24/CO (ADDF_X1M_A9TR)                         0.06       0.62 r
+  intadd_0/U23/CO (ADDF_X1M_A9TR)                         0.06       0.67 r
+  intadd_0/U22/CO (ADDF_X1M_A9TR)                         0.06       0.73 r
+  intadd_0/U21/CO (ADDF_X1M_A9TR)                         0.06       0.79 r
+  intadd_0/U20/CO (ADDF_X1M_A9TR)                         0.06       0.84 r
+  intadd_0/U19/CO (ADDF_X1M_A9TR)                         0.06       0.90 r
+  intadd_0/U18/CO (ADDF_X1M_A9TR)                         0.06       0.95 r
+  intadd_0/U17/CO (ADDF_X1M_A9TR)                         0.06       1.01 r
+  intadd_0/U16/CO (ADDF_X1M_A9TR)                         0.06       1.07 r
+  intadd_0/U15/CO (ADDF_X1M_A9TR)                         0.06       1.12 r
+  intadd_0/U14/CO (ADDF_X1M_A9TR)                         0.06       1.18 r
+  intadd_0/U13/CO (ADDF_X1M_A9TR)                         0.06       1.23 r
+  intadd_0/U12/CO (ADDF_X1M_A9TR)                         0.06       1.29 r
+  intadd_0/U11/CO (ADDF_X1M_A9TR)                         0.06       1.35 r
+  intadd_0/U10/CO (ADDF_X1M_A9TR)                         0.06       1.40 r
+  intadd_0/U9/CO (ADDF_X1M_A9TR)                          0.06       1.46 r
+  intadd_0/U8/CO (ADDF_X1M_A9TR)                          0.06       1.51 r
+  intadd_0/U7/CO (ADDF_X1M_A9TR)                          0.06       1.57 r
+  intadd_0/U6/CO (ADDF_X1M_A9TR)                          0.06       1.62 r
+  intadd_0/U5/CO (ADDF_X1M_A9TR)                          0.06       1.68 r
+  intadd_0/U4/CO (ADDF_X1M_A9TR)                          0.06       1.74 r
+  intadd_0/U3/CO (ADDF_X1M_A9TR)                          0.06       1.79 r
+  intadd_0/U2/S (ADDF_X1M_A9TR)                           0.06       1.85 r
+  U275/Y (AND2_X0P5B_A9TR)                                0.05       1.90 r
+  Accumulator_reg[27]/D (DFFRPQ_X1M_A9TR)                 0.00       1.90 r
+  data arrival time                                                  1.90
+
+  clock clk (rise edge)                                   3.12       3.12
+  clock network delay (ideal)                             0.00       3.12
+  Accumulator_reg[27]/CK (DFFRPQ_X1M_A9TR)                0.00       3.12 r
+  library setup time                                     -0.02       3.10
+  data required time                                                 3.10
+  --------------------------------------------------------------------------
+  data required time                                                 3.10
+  data arrival time                                                 -1.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.20
+
+
+1

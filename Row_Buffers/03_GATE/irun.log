@@ -1,0 +1,605 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Jan 09, 2024 at 01:32:40 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-f file_list.f
+		../04_MEM/sram_256word_8bit/sram_sp_hde.v
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Row_Buffers:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: ../04_MEM/sram_256word_8bit/sram_sp_hde.v
+	module worklib.sram_sp_hde:v
+		errors: 0, warnings: 0
+	module worklib.sram_sp_hde_error_injection:v
+		errors: 0, warnings: 0
+file: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	primitive worklib.udp_dffr3:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lcg:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf2_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_retpwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_or_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out_:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedfft:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_or_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_jkff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_bmx:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedffsr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux4:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_retn_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_o2lvluu_pp_or_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph2p:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mux:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_buf_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_a2lvluu_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_outrf:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_and_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr2:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr4:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_xprop:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph1p:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffpower:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_always0_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edfft_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out__PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff_ros:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_wao:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_mx21:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_plat_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lvl_pp_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlatrf:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_power:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph2p_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslat_out__PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedfft_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edff:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_jkff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_retn:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lv_pp_or_vddi_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_csa4to2_carry:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedff_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_always1_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ando_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_lvl_pp_vdd_vss:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_sedffsr_PWR:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_tlat_ros:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_edfft:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out_:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_rslatn_out:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_oro_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_not_pp:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_plat:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_ph1p_pwr:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_xgen:v
+		errors: 0, warnings: 0
+	primitive worklib.udp_dffr1:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  sram_sp_hde genblk1_0__S0 ( .AY({SYNOPSYS_UNCONNECTED_8, 
+                          |
+ncelab: *W,CUVWSP (./Row_Buffers_SYN.v,99|26): 2 output ports were not connected:
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): CENY
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): WENY
+
+  sram_sp_hde genblk1_1__S0 ( .AY({SYNOPSYS_UNCONNECTED_24, 
+                          |
+ncelab: *W,CUVWSP (./Row_Buffers_SYN.v,116|26): 2 output ports were not connected:
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): CENY
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): WENY
+
+  sram_sp_hde genblk1_2__S0 ( .AY({SYNOPSYS_UNCONNECTED_40, 
+                          |
+ncelab: *W,CUVWSP (./Row_Buffers_SYN.v,134|26): 2 output ports were not connected:
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): CENY
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): WENY
+
+  sram_sp_hde genblk1_3__S0 ( .AY({SYNOPSYS_UNCONNECTED_56, 
+                          |
+ncelab: *W,CUVWSP (./Row_Buffers_SYN.v,152|26): 2 output ports were not connected:
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): CENY
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): WENY
+
+  sram_sp_hde genblk1_4__S0 ( .AY({SYNOPSYS_UNCONNECTED_72, 
+                          |
+ncelab: *W,CUVWSP (./Row_Buffers_SYN.v,170|26): 2 output ports were not connected:
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): CENY
+ncelab: (../04_MEM/sram_256word_8bit/sram_sp_hde.v,536): WENY
+
+	Top level design units:
+		TESTBED
+		sram_sp_hde_error_injection
+	Reading SDF file from location "Row_Buffers_SYN.sdf"
+	Compiled SDF file "Row_Buffers_SYN.sdf.X" older than source SDF file "Row_Buffers_SYN.sdf".
+	Recompiling.
+	Writing compiled SDF file to "Row_Buffers_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     Row_Buffers_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Row_Buffers
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_1_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10815>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_2_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10836>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_3_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10857>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_4_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10878>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_5_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10899>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_6_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10920>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_7_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10941>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_8_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10962>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_9_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 10983>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_10_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11004>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_12_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11025>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_13_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11046>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_14_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11067>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_15_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11088>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_16_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11109>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_17_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11130>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_18_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11151>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_19_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11172>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_20_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11193>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_21_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11214>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_22_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11235>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_23_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11256>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.toPEs_reg_24_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11277>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_25_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11298>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_27_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11319>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_28_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11340>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_29_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11361>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_30_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11382>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_31_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11403>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_32_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11424>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_33_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11445>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_34_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11466>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_35_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11487>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_36_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11508>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_37_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11529>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_38_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11550>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_39_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11571>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Row_Buffers.out_valid_reg of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 11592>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_3__0_ of module DFFRPQN_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11613>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Row_Buffers.w_reg_1_ of module DFFRPQN_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11634>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Row_Buffers.w_reg_0_ of module DFFRPQN_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11655>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.datain_reg_2__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11676>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_reg_2__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11697>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_2__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11718>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_2__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11739>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.datain_reg_2__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11760>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_reg_2__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11781>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_reg_2__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11802>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11823>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11844>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11865>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11886>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11907>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11928>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11949>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11970>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 11991>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12012>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12033>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12054>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12075>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12096>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_0__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12117>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12138>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12159>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12180>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12201>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12222>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12243>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12264>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12285>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12306>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12327>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12348>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12369>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12390>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12411>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_3__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12432>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12453>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12474>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12495>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12516>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12537>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12558>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12579>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12600>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12621>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12642>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12663>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12684>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12705>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12726>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_1__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12747>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12768>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12789>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12810>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12831>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12852>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12873>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12894>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12915>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_2__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12936>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_4__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12957>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.w_reg_2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12978>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.w_reg_4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 12999>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.w_reg_3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13020>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13041>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13062>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13083>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13104>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13125>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13146>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13167>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13188>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13209>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13230>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13251>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13272>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13293>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13314>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_1__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13335>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13356>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13377>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13398>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13419>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13440>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13461>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13482>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13503>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13524>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13545>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13566>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13587>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13608>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13629>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_2__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13650>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13671>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13692>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13713>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13734>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13755>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13776>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13797>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13818>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13839>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13860>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13881>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13902>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13923>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13944>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_0__7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13965>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 13986>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14007>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14028>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14049>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14070>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_6_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14091>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cnt_reg_7_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14112>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cur_state_reg_1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14133>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.cnt_reg_0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14154>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_0_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 14175>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.005)) of instance TESTBED.I_Row_Buffers.toPEs_reg_11_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 14196>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Row_Buffers.toPEs_reg_26_ of module DFFRPQ_X1M_A9TR <./Row_Buffers_SYN.sdf, line 14217>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.016)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_1__0_ of module DFFRPQN_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14238>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.datain_reg_2__0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14259>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_reg_1__5_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14280>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.018)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_4__4_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14301>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_2__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14322>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_output_DFF_reg_0__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14343>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_2__3_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14364>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.datain_2t_reg_0__2_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14385>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.datain_1t_reg_1__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14406>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.cur_state_reg_0_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14427>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.015)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_4__1_ of module DFFRPQN_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14448>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_1__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14484>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.017)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_3__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14505>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_0__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14526>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.013)) of instance TESTBED.I_Row_Buffers.sram_input_select_reg_2__1_ of module DFFRPQ_X0P5M_A9TR <./Row_Buffers_SYN.sdf, line 14547>.
+	Annotation completed with 0 Errors and 178 Warnings
+	SDF statistics: No. of Pathdelays = 7676  Annotated = 100.00% -- No. of Tchecks = 2761  Annotated = 27.16% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	        7676	        7676	      100.00
+		     $period	         255	           0	        0.00
+		      $width	        1486	          30	        2.02
+		     $recrem	         178	         178	      100.00
+		  $setuphold	         842	         542	       64.37
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x36660d46>
+			streams:   9, words: 12424
+		worklib.Row_Buffers:v <0x78ccae9c>
+			streams:   0, words:     0
+		worklib.TESTBED:v <0x12802952>
+			streams:   1, words:   712
+		worklib.sram_sp_hde:v <0x6909da64>
+			streams: 157, words: 77776
+		worklib.sram_sp_hde_error_injection:v <0x5fa6e938>
+			streams:   5, words:  5743
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                  577      45
+		UDPs:                     186      73
+		Primitives:              1977       6
+		Timing outputs:           696      53
+		Registers:                699     175
+		Scalar wires:            3796       -
+		Expanded wires:           144      16
+		Vectored wires:             3       -
+		Always blocks:            262      54
+		Initial blocks:            10       6
+		Cont. assignments:         15      93
+		Timing checks:           3781     898
+		Interconnect:            1878       -
+		Delayed tcheck signals:   550     192
+		Simulation timescale:     1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'Row_Buffers_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:65625 PS, negedge WEN:65728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_0__S0
+            Time: 65728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:65625 PS, negedge WEN:65728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_1__S0
+            Time: 65728 PS
+
+send input#  1
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:890625 PS, negedge WEN:890731 PS,  0.094000 : 94 PS,  0.118000 : 118 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_4__S0
+            Time: 890731 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:890625 PS, negedge WEN:890738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_3__S0
+            Time: 890738 PS
+
+send input#  2
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:1715625 PS, negedge WEN:1715728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_1__S0
+            Time: 1715728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:1715625 PS, negedge WEN:1715738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_2__S0
+            Time: 1715738 PS
+
+send input#  3
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:2540625 PS, negedge WEN:2540728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_0__S0
+            Time: 2540728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:2540625 PS, negedge WEN:2540731 PS,  0.094000 : 94 PS,  0.118000 : 118 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_4__S0
+            Time: 2540731 PS
+
+send input#  4
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:3365625 PS, negedge WEN:3365738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_2__S0
+            Time: 3365738 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:3365625 PS, negedge WEN:3365738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_3__S0
+            Time: 3365738 PS
+
+send input#  5
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:4190625 PS, negedge WEN:4190728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_0__S0
+            Time: 4190728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:4190625 PS, negedge WEN:4190728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_1__S0
+            Time: 4190728 PS
+
+send input#  6
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:5015625 PS, negedge WEN:5015731 PS,  0.094000 : 94 PS,  0.118000 : 118 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_4__S0
+            Time: 5015731 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:5015625 PS, negedge WEN:5015738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_3__S0
+            Time: 5015738 PS
+
+send input#  7
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:5840625 PS, negedge WEN:5840728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_1__S0
+            Time: 5840728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:5840625 PS, negedge WEN:5840738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_2__S0
+            Time: 5840738 PS
+
+send input#  8
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:6665625 PS, negedge WEN:6665728 PS,  0.099000 : 99 PS,  0.116000 : 116 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_0__S0
+            Time: 6665728 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:6665625 PS, negedge WEN:6665731 PS,  0.094000 : 94 PS,  0.118000 : 118 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_4__S0
+            Time: 6665731 PS
+
+send input#  9
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:7490625 PS, negedge WEN:7490738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_2__S0
+            Time: 7490738 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CLK &&& TENeq1andCENeq0:7490625 PS, negedge WEN:7490738 PS,  0.097000 : 97 PS,  0.117000 : 117 PS );
+            File: ../04_MEM/sram_256word_8bit/sram_sp_hde.v, line = 1826
+           Scope: TESTBED.I_Row_Buffers.genblk1_3__S0
+            Time: 7490738 PS
+
+  END 
+Simulation complete via $finish(1) at time 8298437500 FS + 0
+./PATTERN.v:82 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Jan 09, 2024 at 01:33:23 CST  (total: 00:00:43)

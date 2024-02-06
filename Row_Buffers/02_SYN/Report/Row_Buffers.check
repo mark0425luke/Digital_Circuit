@@ -1,0 +1,57 @@
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12
+Date:        Tue Jan  9 01:32:17 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
+
+Nets                                                               36
+    Unloaded nets (LINT-2)                                         18
+    Net has multiple drivers (LINT-4)                              18
+--------------------------------------------------------------------------------
+
+Warning: In design 'Row_Buffers', cell 'C1168' does not drive any nets. (LINT-1)
+Warning: In design 'Row_Buffers', cell 'C1171' does not drive any nets. (LINT-1)
+Warning: In design 'Row_Buffers', cell 'C1184' does not drive any nets. (LINT-1)
+Warning: In design 'Row_Buffers', net 'dy[0]' driven by pin 'genblk1[4].S0/DY[0]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[1]' driven by pin 'genblk1[4].S0/DY[1]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[2]' driven by pin 'genblk1[4].S0/DY[2]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[3]' driven by pin 'genblk1[4].S0/DY[3]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[4]' driven by pin 'genblk1[4].S0/DY[4]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[5]' driven by pin 'genblk1[4].S0/DY[5]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[6]' driven by pin 'genblk1[4].S0/DY[6]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'dy[7]' driven by pin 'genblk1[4].S0/DY[7]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[0]' driven by pin 'genblk1[4].S0/AY[0]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[1]' driven by pin 'genblk1[4].S0/AY[1]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[2]' driven by pin 'genblk1[4].S0/AY[2]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[3]' driven by pin 'genblk1[4].S0/AY[3]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[4]' driven by pin 'genblk1[4].S0/AY[4]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[5]' driven by pin 'genblk1[4].S0/AY[5]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[6]' driven by pin 'genblk1[4].S0/AY[6]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ay[7]' driven by pin 'genblk1[4].S0/AY[7]' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'weny' driven by pin 'genblk1[4].S0/WENY' has no loads. (LINT-2)
+Warning: In design 'Row_Buffers', net 'ceny' driven by pin 'genblk1[4].S0/CENY' has no loads. (LINT-2)
+Information: In design 'Row_Buffers', net 'dy[0]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[1]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[2]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[3]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[4]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[5]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[6]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'dy[7]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[0]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[1]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[2]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[3]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[4]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[5]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[6]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ay[7]' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'weny' has multiple drivers.  Wired AND assumed. (LINT-4)
+Information: In design 'Row_Buffers', net 'ceny' has multiple drivers.  Wired AND assumed. (LINT-4)
+1

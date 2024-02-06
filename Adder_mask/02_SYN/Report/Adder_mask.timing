@@ -1,0 +1,58 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Adder_mask
+Version: Q-2019.12
+Date   : Wed Jan 10 18:15:15 2024
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: WHICH_FILTER[68]
+              (input port clocked by clk)
+  Endpoint: adder_mask_reg[9][14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Adder_mask         Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  WHICH_FILTER[68] (in)                                   0.00       0.00 f
+  U2129/Y (INV_X0P5B_A9TR)                                0.19       0.19 r
+  U3148/Y (AOI22_X0P5M_A9TR)                              0.09       0.28 f
+  U3152/Y (NAND4_X0P5M_A9TR)                              0.07       0.35 r
+  U3153/Y (NOR3_X0P5A_A9TR)                               0.04       0.39 f
+  U3157/Y (NAND4_X0P5M_A9TR)                              0.07       0.45 r
+  U1939/Y (NAND4_X0P5M_A9TR)                              0.06       0.51 f
+  U1933/Y (NAND4BB_X0P5M_A9TR)                            0.07       0.58 f
+  U1890/Y (NOR3_X0P5A_A9TR)                               0.11       0.69 r
+  U3676/Y (INV_X0P5B_A9TR)                                0.11       0.80 f
+  U1848/Y (NOR2_X0P5A_A9TR)                               0.08       0.88 r
+  adder_mask_reg[9][14]/D (DFFRPQ_X1M_A9TR)               0.00       0.89 r
+  data arrival time                                                  0.89
+
+  clock clk (rise edge)                                  26.56      26.56
+  clock network delay (ideal)                             0.00      26.56
+  adder_mask_reg[9][14]/CK (DFFRPQ_X1M_A9TR)              0.00      26.56 r
+  library setup time                                     -0.03      26.53
+  data required time                                                26.53
+  --------------------------------------------------------------------------
+  data required time                                                26.53
+  data arrival time                                                 -0.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                       25.64
+
+
+1

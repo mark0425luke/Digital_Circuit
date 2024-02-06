@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Activation/04_PTPX/File/Activation_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0,0)-(6,1204414974) time 0.009075 0.035780 0.018675 delta 74219520 74219520 total 371077120 371077120
+Write signals (0,0)-(6,1204414974) time 0.137165 0.135222 0.000000 delta 0 0 total 371077120 371077120
+Unload (0,0)-(6,1204414974) time 0.000092 0.000093 0.000000 delta 0 0 total 371077120 371077120
+au time 0.548339 0.179839 0.038388 delta 105099264 105099264 total 207085568 207085568

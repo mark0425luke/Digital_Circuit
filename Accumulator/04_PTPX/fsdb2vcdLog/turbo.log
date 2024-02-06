@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Accumulator/04_PTPX/File/Accumulator_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0)-(1105000000) time 0.011258 0.020218 0.053280 delta 74080256 74080256 total 370999296 370999296
+Write signals (0)-(1105000000) time 0.050634 0.049152 0.000752 delta 0 0 total 370999296 370999296
+Unload (0)-(1105000000) time 0.000222 0.000108 0.000113 delta 0 0 total 370999296 370999296
+au time 0.433552 0.084596 0.072242 delta 105017344 105017344 total 207007744 207007744

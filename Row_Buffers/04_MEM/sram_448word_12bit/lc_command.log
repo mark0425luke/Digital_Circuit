@@ -1,0 +1,9 @@
+#@ # 
+#@ # Running lc_shell Version Q-2019.12 for linux64 -- Dec 02, 2019
+#@ # Date:   Tue Nov 28 00:10:05 2023
+#@ # Run by: mark@EECS
+#@ 
+
+read_lib sram_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.lib
+write_lib -format db USERLIB_nldm_tt_0p90v_0p90v_25c -output sram_448word_12bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db
+exit

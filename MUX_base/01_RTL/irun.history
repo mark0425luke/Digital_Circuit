@@ -1,0 +1,3 @@
+s1(21Dec2023:00:05:30):  irun TESTBED.v -define RTL -debug 
+s2(21Dec2023:00:08:24):  irun TESTBED.v -define RTL -debug 
+s3(10Jan2024:19:50:53):  irun TESTBED.v -define RTL -debug 

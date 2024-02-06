@@ -1,0 +1,423 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Jan 08, 2024 at 23:43:46 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+	-f file_list.f
+		../04_MEM/sram_256word_8bit/sram_sp_hde.v
+	-notimingchecks
+	-incdir /usr/synthesis/dw/sim_ver
+ncvlog: *W,NOTIND: unable to access -INCDIR /usr/synthesis/dw/sim_ver (No such file or directory).
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+   |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|3): non-printable character (0xe7) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+    |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|4): non-printable character (0xbb) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+     |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|5): non-printable character (0xbc) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+      |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|6): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+       |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|7): non-printable character (0x90) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+        |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|8): non-printable character (0x88) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+         |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|9): non-printable character (0xe6) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+          |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|10): non-printable character (0x97) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// 综合时filelist.f中不能添加sram的行为模型.v文件，只要把.db放到link library下就行；
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,2|11): non-printable character (0xb6) ignored.
+(`include file: Row_Buffers.v line 2, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+       |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|7): non-printable character (0xef) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+        |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|8): non-printable character (0xbc) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+         |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|9): non-printable character (0x8c) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+          |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|10): non-printable character (0xe8) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|11): non-printable character (0xa6) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+// SRAM，要 (STRIDE * K - STRIDE + K) 個，每次 K 個拿來寫，剩下讀
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,292|12): non-printable character (0x81) ignored.
+(`include file: Row_Buffers.v line 292, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|11): non-printable character (0xe9) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|12): non-printable character (0x80) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|13): non-printable character (0x99) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+              |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|14): non-printable character (0xe9) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+               |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|15): non-printable character (0x82) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|16): non-printable character (0x8a) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                 |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|17): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                  |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|18): non-printable character (0xb0) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                   |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|19): non-printable character (0xb1) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                    |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|20): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                     |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|21): non-printable character (0xa5) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                      |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|22): non-printable character (0xbd) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                       |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|23): non-printable character (0xef) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                        |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|24): non-printable character (0xbc) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                         |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|25): non-printable character (0x8c) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                          |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|26): non-printable character (0xe8) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                           |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|27): non-printable character (0xb7) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 這邊就好，跟 iclab 一樣
+                            |
+ncvlog: *W,NONPRT (Row_Buffers.v,304|28): non-printable character (0x9f) ignored.
+(`include file: Row_Buffers.v line 304, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|11): non-printable character (0xe9) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|12): non-printable character (0x9a) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|13): non-printable character (0xa8) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+              |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|14): non-printable character (0xe4) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+               |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|15): non-printable character (0xbe) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+                |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|16): non-printable character (0xbf) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+                 |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|17): non-printable character (0xe7) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+                  |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|18): non-printable character (0x94) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 隨便用 wire 接
+                   |
+ncvlog: *W,NONPRT (Row_Buffers.v,312|19): non-printable character (0xa8) ignored.
+(`include file: Row_Buffers.v line 312, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|11): non-printable character (0xe7) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|12): non-printable character (0x85) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|13): non-printable character (0xa7) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+              |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|14): non-printable character (0xe8) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+               |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|15): non-printable character (0x91) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|16): non-printable character (0x97) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                 |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|17): non-printable character (0xe9) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                  |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|18): non-printable character (0x80) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                   |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|19): non-printable character (0x99) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                    |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|20): non-printable character (0xe9) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                     |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|21): non-printable character (0x82) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                      |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|22): non-printable character (0x8a) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                       |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|23): non-printable character (0xe8) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                        |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|24): non-printable character (0xa8) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                         |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|25): non-printable character (0xad) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                          |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|26): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                           |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|27): non-printable character (0xae) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                            |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|28): non-printable character (0x9a) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                             |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|29): non-printable character (0xef) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                              |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|30): non-printable character (0xbc) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                               |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|31): non-printable character (0x8c) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|32): non-printable character (0xe7) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                 |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|33): non-printable character (0x9c) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                  |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|34): non-printable character (0x8b) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                   |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|35): non-printable character (0xe6) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                    |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|36): non-printable character (0x98) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                     |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|37): non-printable character (0xaf) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                      |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|38): non-printable character (0xe7) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                       |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|39): non-printable character (0xb5) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 照著這邊設定，看是給1 或 0
+                                        |
+ncvlog: *W,NONPRT (Row_Buffers.v,318|40): non-printable character (0xa6) ignored.
+(`include file: Row_Buffers.v line 318, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|11): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|12): non-printable character (0x89) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|13): non-printable character (0xa9) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+              |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|14): non-printable character (0xe4) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+               |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|15): non-printable character (0xb8) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 剩下 K~STRIDE * K - STRIDE + K-1 : sram_output
+                |
+ncvlog: *W,NONPRT (Row_Buffers.v,349|16): non-printable character (0x8b) ignored.
+(`include file: Row_Buffers.v line 349, file: TESTBED.v line 5)
+        // 寫 sram 的拿 sram_output_DFF
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,350|11): non-printable character (0xe5) ignored.
+(`include file: Row_Buffers.v line 350, file: TESTBED.v line 5)
+        // 寫 sram 的拿 sram_output_DFF
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,350|12): non-printable character (0xaf) ignored.
+(`include file: Row_Buffers.v line 350, file: TESTBED.v line 5)
+        // 寫 sram 的拿 sram_output_DFF
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,350|13): non-printable character (0xab) ignored.
+(`include file: Row_Buffers.v line 350, file: TESTBED.v line 5)
+        // 讀 sram 的拿 sram_input
+           |
+ncvlog: *W,NONPRT (Row_Buffers.v,351|11): non-printable character (0xe8) ignored.
+(`include file: Row_Buffers.v line 351, file: TESTBED.v line 5)
+        // 讀 sram 的拿 sram_input
+            |
+ncvlog: *W,NONPRT (Row_Buffers.v,351|12): non-printable character (0xae) ignored.
+(`include file: Row_Buffers.v line 351, file: TESTBED.v line 5)
+        // 讀 sram 的拿 sram_input
+             |
+ncvlog: *W,NONPRT (Row_Buffers.v,351|13): non-printable character (0x80) ignored.
+(`include file: Row_Buffers.v line 351, file: TESTBED.v line 5)
+	module worklib.Row_Buffers:v
+		errors: 0, warnings: 75
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: ../04_MEM/sram_256word_8bit/sram_sp_hde.v
+	module worklib.sram_sp_hde:v
+		errors: 0, warnings: 0
+	module worklib.sram_sp_hde_error_injection:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 10
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+		sram_sp_hde_error_injection
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x0e478c73>
+			streams:   9, words: 12182
+		worklib.Row_Buffers:v <0x3cc72af8>
+			streams:  36, words: 21005
+		worklib.TESTBED:v <0x07daa55d>
+			streams:   1, words:   613
+		worklib.sram_sp_hde:v <0x64af990b>
+			streams: 157, words: 77776
+		worklib.sram_sp_hde:v <0x69a7e372>
+			streams: 157, words: 77776
+		worklib.sram_sp_hde_error_injection:v <0x468460b2>
+			streams:   5, words:  5743
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  9       5
+		Primitives:             405       1
+		Timing outputs:         130      52
+		Registers:              528     144
+		Scalar wires:           641       -
+		Expanded wires:         249      38
+		Vectored wires:           5       -
+		Always blocks:          271      63
+		Initial blocks:          10       6
+		Cont. assignments:       16      70
+		Pseudo assignments:      35       7
+		Timing checks:         1225       -
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'Row_Buffers.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+  END 
+Simulation complete via $finish(1) at time 26555 NS + 0
+./PATTERN.v:82 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Jan 08, 2024 at 23:44:28 CST  (total: 00:00:42)

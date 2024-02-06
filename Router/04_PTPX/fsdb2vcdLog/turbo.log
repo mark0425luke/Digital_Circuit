@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Router/04_PTPX/File/Router_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0,0)-(61,3910901194) time 0.178710 0.871796 0.318445 delta 81350656 81350656 total 379064320 379064320
+Write signals (0,0)-(61,3910901194) time 34.232073 26.126653 0.141849 delta 749568 749568 total 379813888 379813888
+Unload (0,0)-(61,3910901194) time 0.004006 0.000981 0.003024 delta 0 0 total 379813888 379813888
+au time 34.831859 27.040380 0.484836 delta 113569792 113569792 total 215556096 215556096

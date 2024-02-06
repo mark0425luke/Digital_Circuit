@@ -1,0 +1,21 @@
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12
+Date:        Thu Dec 21 02:51:36 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               7
+    Cells do not drive (LINT-1)                                     7
+--------------------------------------------------------------------------------
+
+Warning: In design 'Router', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM29_FIFO_DEPTH2_1', cell 'C349' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM29_FIFO_DEPTH2_1', cell 'C353' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM58_FIFO_DEPTH2', cell 'C611' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM58_FIFO_DEPTH2', cell 'C615' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM29_FIFO_DEPTH2_0', cell 'C349' does not drive any nets. (LINT-1)
+Warning: In design 'Router_FIFO_WIRE_NUM29_FIFO_DEPTH2_0', cell 'C353' does not drive any nets. (LINT-1)
+1

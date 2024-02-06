@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/Decoder/04_PTPX/File/Decoder_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 26841.4ns)
+
+Information: Total simulation time = 26841.406250 ns
+****************************************
+Report : Time Based Power
+Design : Decoder
+Version: Q-2019.12
+Date   : Wed Dec 20 02:22:45 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                6.974e-05 3.863e-07 1.645e-05 8.658e-05 (96.78%)  i
+combinational           7.501e-08 5.504e-07 2.255e-06 2.881e-06 ( 3.22%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 9.366e-07   ( 1.05%)
+  Cell Internal Power  = 6.981e-05   (78.04%)
+  Cell Leakage Power   = 1.871e-05   (20.91%)
+    Intrinsic Leakage  = 1.871e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 8.946e-05  (100.00%)
+
+X Transition Power     = 1.799e-10
+Glitching Power        =    0.0000
+
+Peak Power             = 1.678e-03
+Peak Time              =       159
+
+1

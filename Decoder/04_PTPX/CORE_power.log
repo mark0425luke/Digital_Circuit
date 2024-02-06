@@ -1,0 +1,192 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+                 Version Q-2019.12 for linux64 - Nov 20, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+#======================================================
+#
+# PrimeTime  Scripts (dctcl mode)
+#
+#======================================================
+#======================================================
+#  1. Set the Power Analysis Mode
+#======================================================
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+set power_analysis_mode time_based
+time_based
+set power_report_leakage_breakdowns true
+true
+set power_clock_network_include_register_clock_pin_power false
+false
+#======================================================
+#  2. Read and link the design
+#======================================================
+set search_path { ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/ 			        /usr/cad/synopsys/synthesis/2019.12/libraries/syn/ 			        /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ }
+ ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/            /usr/cad/synopsys/synthesis/2019.12/libraries/syn/            /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set DESIGN "Decoder"
+Decoder
+read_verilog $DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/mark/Digital_Circuit/Decoder/04_PTPX/File/Decoder_SYN.v'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+Linking design Decoder...
+Information: 369 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 112 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: 1003 (98.72%) library cells are unused in library sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c..... (LNK-045)
+Information: total 1484 library cells are unused (LNK-046)
+Design 'Decoder' was successfully linked.
+Information: There are 259 leaf cells, ports, hiers and 193 nets in the design (LNK-047)
+1
+#======================================================
+#  3. Set transition time / annotate parasitics
+#======================================================
+set_input_transition .1 [all_inputs]
+1
+read_sdc File/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+read_sdf -load_delay net $DESIGN\_SYN.sdf
+
+****************************************
+Report : read_sdf /home/mark/Digital_Circuit/Decoder/04_PTPX/File/Decoder_SYN.sdf
+	-load_delay net
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : Decoder
+Version: Q-2019.12
+Date   : Wed Jan 31 18:21:13 2024
+****************************************
+
+        0 error(s)
+        Number of annotated cell delay arcs :       599
+        Number of annotated net delay arcs  :       443
+        Number of annotated timing checks   :       432
+        TEMPERATURE: 25.00 (min)  25.00 (max)
+        VOLTAGE    : 0.90 (min)  0.90 (max)
+        PROCESS    : tt_typical_max_0p90v_25c (min)  tt_typical_max_0p90v_25c (max)
+1
+#======================================================
+#  4. Read Switching Activity File
+#======================================================
+read_vcd -strip_path TESTBED/I_$DESIGN $DESIGN\_SYN.fsdb
+
+======================================================================
+Summary:
+Total number of nets = 193
+Number of annotated nets = 193 (100.00%)
+Total number of leaf cells = 184
+Number of fully annotated leaf cells = 184 (100.00%)
+======================================================================
+
+1
+#======================================================
+#  5. Perform power analysis
+#======================================================
+check_power
+Information: Checking 'out_of_table_range'.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+check_power succeeded.
+1
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/Decoder/04_PTPX/File/Decoder_SYN.fsdb'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	1e-06ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 789.453ns)
+
+Information: Total simulation time = 789.453125 ns
+1
+#======================================================
+#  6. Generate Power Report
+#======================================================
+# BUG command 
+set_power_analysis_options -waveform_interval 1 -waveform_format out -waveform_output vcd
+# vcd.out
+report_power > Report/$DESIGN\_POWER 
+ Last event time =  419.141 ns report_power
+****************************************
+Report : Time Based Power
+Design : Decoder
+Version: Q-2019.12
+Date   : Wed Jan 31 18:21:16 2024
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                3.288e-04 1.308e-05 2.244e-06 3.441e-04 (96.97%)  i
+combinational           1.864e-06 8.419e-06 4.791e-07 1.076e-05 ( 3.03%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 2.150e-05   ( 6.06%)
+  Cell Internal Power  = 3.307e-04   (93.17%)
+  Cell Leakage Power   = 2.723e-06   ( 0.77%)
+    Intrinsic Leakage  = 2.723e-06
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 3.549e-04  (100.00%)
+
+X Transition Power     = 1.630e-10
+Glitching Power        =    0.0000
+
+Peak Power             = 5.464e-04
+Peak Time              =       575
+
+1
+exit
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'synthetic_library'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1012.63 MB
+CPU usage for this session: 6 seconds 
+Elapsed time for this session: 9 seconds
+Diagnostics summary: 1 error, 1 warning, 11 informationals
+
+Thank you for using pt_shell!

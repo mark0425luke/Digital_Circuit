@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Router
+Version: Q-2019.12
+Date   : Thu Dec 21 02:51:56 2023
+****************************************
+
+Library(s) Used:
+
+    sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c (File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db)
+
+Number of ports:                          244
+Number of nets:                          1197
+Number of cells:                         1048
+Number of combinational cells:            596
+Number of sequential cells:               452
+Number of macros/black boxes:               0
+Number of buf/inv:                        116
+Number of references:                      35
+
+Combinational area:                809.449190
+Buf/Inv area:                       59.648399
+Noncombinational area:            2050.271898
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  2859.721088
+Total area:                       2859.721088
+1

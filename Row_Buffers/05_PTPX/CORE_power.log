@@ -1,0 +1,1074 @@
+
+                                 PrimeTime (R)
+
+                 Version Q-2019.12 for linux64 - Nov 20, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+#======================================================
+#
+# PrimeTime  Scripts (dctcl mode)
+#
+#======================================================
+#======================================================
+#  1. Set the Power Analysis Mode
+#======================================================
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+set power_analysis_mode time_based
+time_based
+set power_report_leakage_breakdowns true
+true
+set power_clock_network_include_register_clock_pin_power false
+false
+#======================================================
+#  2. Read and link the design
+#======================================================
+set search_path { ./                  ./File/ 				  ./../04_MEM/sram_448word_12bit/										  ./../04_MEM/sram_2400word_48bit/										  ./../04_MEM/sram_1792word_32bit/										  ./../04_MEM/sram_512word_8bit/										  ./../04_MEM/sram_1024word_16bit/										  ./../04_MEM/sram_512word_16bit/						                  /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/      				      /usr/cad/synopsys/synthesis/2019.12/libraries/syn/   				      /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 				  }
+ ./                  ./File/       ./../04_MEM/sram_448word_12bit/            ./../04_MEM/sram_2400word_48bit/            ./../04_MEM/sram_1792word_32bit/            ./../04_MEM/sram_512word_8bit/            ./../04_MEM/sram_1024word_16bit/            ./../04_MEM/sram_512word_16bit/                        /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/                /usr/cad/synopsys/synthesis/2019.12/libraries/syn/             /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/       
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+# depend on sram, each time choose one
+# set link_library {	* dw_foundation.sldb # 					standard.sldb # 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db # 					sram_448word_12bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db # 					 }
+# set link_library {	* dw_foundation.sldb #                     standard.sldb #                     sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db #                     sram_1792word_32bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db #                         }
+# set link_library {	* dw_foundation.sldb # 					standard.sldb # 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db # 					sram_2400word_48bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db# 						}
+set link_library {	* dw_foundation.sldb 					standard.sldb 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db 					sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db						}
+	* dw_foundation.sldb 					standard.sldb 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db 					sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db						
+# set link_library {	* dw_foundation.sldb # 					standard.sldb # 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db # 					sram_1024word_16bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db # 					 }
+# set link_library {	* dw_foundation.sldb # 					standard.sldb # 					sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db # 					sram_512word_16bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db # 					 }
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set DESIGN "Row_Buffers"
+Row_Buffers
+read_verilog $DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/mark/Digital_Circuit/Row_Buffers/05_PTPX/File/Row_Buffers_SYN.v'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+Error: Cannot read link_path file 'sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db'. (LNK-001)
+Error: Cannot read link_path file 'sram_256word_8bit_sp_hde_nldm_tt_0p90v_0p90v_25c_syn.db'. (LNK-001)
+Linking design Row_Buffers...
+Warning: Unable to resolve reference to 'sram_sp_hde' in 'Row_Buffers'. (LNK-005)
+Information: Creating black box for genblk1_2__S0/sram_sp_hde... (LNK-043)
+Information: Creating black box for genblk1_4__S0/sram_sp_hde... (LNK-043)
+Information: Creating black box for genblk1_1__S0/sram_sp_hde... (LNK-043)
+Information: Creating black box for genblk1_3__S0/sram_sp_hde... (LNK-043)
+Information: Creating black box for genblk1_0__S0/sram_sp_hde... (LNK-043)
+Information: 369 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 112 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: 976 (96.06%) library cells are unused in library sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c..... (LNK-045)
+Information: total 1457 library cells are unused (LNK-046)
+Design 'Row_Buffers' was successfully linked.
+Information: There are 642 leaf cells, ports, hiers and 715 nets in the design (LNK-047)
+1
+#======================================================
+#  3. Set transition time / annotate parasitics
+#======================================================
+set_input_transition .1 [all_inputs]
+1
+read_sdc File/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+read_sdf -load_delay net $DESIGN\_SYN.sdf
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[5]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[6]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[7]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[4]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[5]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[6]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_3__S0/Q[7]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[4]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[5]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[6]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[7]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[4]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[5]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[6]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_1__S0/Q[7]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[4]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[5]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[6]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[7]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[4]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_2__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_0__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Warning: Library cell 'sram_sp_hde' is not used in the current design. (SDF-012)
+Error: Cannot find pin 'genblk1_4__S0/CENY' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/CENY' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/CENY' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/CENY' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[0]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[1]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[2]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Error: Cannot find pin 'genblk1_4__S0/Q[3]' in design 'Row_Buffers' (DES-002)
+Note - message 'DES-002' default limit (100) exceeded.  Remainder will be suppressed.
+Warning: Library cell 'sram_sp_hde' is not used in the current design. (SDF-012)
+Warning: Library cell 'sram_sp_hde' is not used in the current design. (SDF-012)
+Warning: Library cell 'sram_sp_hde' is not used in the current design. (SDF-012)
+Warning: Library cell 'sram_sp_hde' is not used in the current design. (SDF-012)
+Error: No net timing arc from pin 'address_reg_0_/Q' to pin 'genblk1_4__S0/A[0]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_1_/Q' to pin 'genblk1_4__S0/A[1]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_2_/Q' to pin 'genblk1_4__S0/A[2]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_3_/Q' to pin 'genblk1_4__S0/A[3]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_4_/Q' to pin 'genblk1_4__S0/A[4]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_5_/Q' to pin 'genblk1_4__S0/A[5]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_6_/Q' to pin 'genblk1_4__S0/A[6]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_7_/Q' to pin 'genblk1_4__S0/A[7]'. (PTE-014)
+Error: No net timing arc from pin 'clk' to pin 'genblk1_4__S0/CLK'. (PTE-014)
+Error: No net timing arc from pin 'U472/Y' to pin 'genblk1_4__S0/D[0]'. (PTE-014)
+Error: No net timing arc from pin 'U471/Y' to pin 'genblk1_4__S0/D[1]'. (PTE-014)
+Error: No net timing arc from pin 'U470/Y' to pin 'genblk1_4__S0/D[2]'. (PTE-014)
+Error: No net timing arc from pin 'U469/Y' to pin 'genblk1_4__S0/D[3]'. (PTE-014)
+Error: No net timing arc from pin 'U468/Y' to pin 'genblk1_4__S0/D[4]'. (PTE-014)
+Error: No net timing arc from pin 'U467/Y' to pin 'genblk1_4__S0/D[5]'. (PTE-014)
+Error: No net timing arc from pin 'U466/Y' to pin 'genblk1_4__S0/D[6]'. (PTE-014)
+Error: No net timing arc from pin 'U465/Y' to pin 'genblk1_4__S0/D[7]'. (PTE-014)
+Error: No net timing arc from pin 'w_reg_4_/Q' to pin 'genblk1_4__S0/WEN'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_0_/Q' to pin 'genblk1_3__S0/A[0]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_1_/Q' to pin 'genblk1_3__S0/A[1]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_2_/Q' to pin 'genblk1_3__S0/A[2]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_3_/Q' to pin 'genblk1_3__S0/A[3]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_4_/Q' to pin 'genblk1_3__S0/A[4]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_5_/Q' to pin 'genblk1_3__S0/A[5]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_6_/Q' to pin 'genblk1_3__S0/A[6]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_7_/Q' to pin 'genblk1_3__S0/A[7]'. (PTE-014)
+Error: No net timing arc from pin 'clk' to pin 'genblk1_3__S0/CLK'. (PTE-014)
+Error: No net timing arc from pin 'U484/Y' to pin 'genblk1_3__S0/D[0]'. (PTE-014)
+Error: No net timing arc from pin 'U483/Y' to pin 'genblk1_3__S0/D[1]'. (PTE-014)
+Error: No net timing arc from pin 'U482/Y' to pin 'genblk1_3__S0/D[2]'. (PTE-014)
+Error: No net timing arc from pin 'U481/Y' to pin 'genblk1_3__S0/D[3]'. (PTE-014)
+Error: No net timing arc from pin 'U480/Y' to pin 'genblk1_3__S0/D[4]'. (PTE-014)
+Error: No net timing arc from pin 'U479/Y' to pin 'genblk1_3__S0/D[5]'. (PTE-014)
+Error: No net timing arc from pin 'U478/Y' to pin 'genblk1_3__S0/D[6]'. (PTE-014)
+Error: No net timing arc from pin 'U477/Y' to pin 'genblk1_3__S0/D[7]'. (PTE-014)
+Error: No net timing arc from pin 'w_reg_3_/Q' to pin 'genblk1_3__S0/WEN'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_0_/Q' to pin 'genblk1_2__S0/A[0]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_1_/Q' to pin 'genblk1_2__S0/A[1]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_2_/Q' to pin 'genblk1_2__S0/A[2]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_3_/Q' to pin 'genblk1_2__S0/A[3]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_4_/Q' to pin 'genblk1_2__S0/A[4]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_5_/Q' to pin 'genblk1_2__S0/A[5]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_6_/Q' to pin 'genblk1_2__S0/A[6]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_7_/Q' to pin 'genblk1_2__S0/A[7]'. (PTE-014)
+Error: No net timing arc from pin 'clk' to pin 'genblk1_2__S0/CLK'. (PTE-014)
+Error: No net timing arc from pin 'U436/Y' to pin 'genblk1_2__S0/D[0]'. (PTE-014)
+Error: No net timing arc from pin 'U432/Y' to pin 'genblk1_2__S0/D[1]'. (PTE-014)
+Error: No net timing arc from pin 'U428/Y' to pin 'genblk1_2__S0/D[2]'. (PTE-014)
+Error: No net timing arc from pin 'U424/Y' to pin 'genblk1_2__S0/D[3]'. (PTE-014)
+Error: No net timing arc from pin 'U421/Y' to pin 'genblk1_2__S0/D[4]'. (PTE-014)
+Error: No net timing arc from pin 'U417/Y' to pin 'genblk1_2__S0/D[5]'. (PTE-014)
+Error: No net timing arc from pin 'U413/Y' to pin 'genblk1_2__S0/D[6]'. (PTE-014)
+Error: No net timing arc from pin 'U409/Y' to pin 'genblk1_2__S0/D[7]'. (PTE-014)
+Error: No net timing arc from pin 'w_reg_2_/Q' to pin 'genblk1_2__S0/WEN'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_0_/Q' to pin 'genblk1_1__S0/A[0]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_1_/Q' to pin 'genblk1_1__S0/A[1]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_2_/Q' to pin 'genblk1_1__S0/A[2]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_3_/Q' to pin 'genblk1_1__S0/A[3]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_4_/Q' to pin 'genblk1_1__S0/A[4]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_5_/Q' to pin 'genblk1_1__S0/A[5]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_6_/Q' to pin 'genblk1_1__S0/A[6]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_7_/Q' to pin 'genblk1_1__S0/A[7]'. (PTE-014)
+Error: No net timing arc from pin 'clk' to pin 'genblk1_1__S0/CLK'. (PTE-014)
+Error: No net timing arc from pin 'U460/Y' to pin 'genblk1_1__S0/D[0]'. (PTE-014)
+Error: No net timing arc from pin 'U459/Y' to pin 'genblk1_1__S0/D[1]'. (PTE-014)
+Error: No net timing arc from pin 'U458/Y' to pin 'genblk1_1__S0/D[2]'. (PTE-014)
+Error: No net timing arc from pin 'U457/Y' to pin 'genblk1_1__S0/D[3]'. (PTE-014)
+Error: No net timing arc from pin 'U456/Y' to pin 'genblk1_1__S0/D[4]'. (PTE-014)
+Error: No net timing arc from pin 'U455/Y' to pin 'genblk1_1__S0/D[5]'. (PTE-014)
+Error: No net timing arc from pin 'U454/Y' to pin 'genblk1_1__S0/D[6]'. (PTE-014)
+Error: No net timing arc from pin 'U453/Y' to pin 'genblk1_1__S0/D[7]'. (PTE-014)
+Error: No net timing arc from pin 'w_reg_1_/QN' to pin 'genblk1_1__S0/WEN'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_0_/Q' to pin 'genblk1_0__S0/A[0]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_1_/Q' to pin 'genblk1_0__S0/A[1]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_2_/Q' to pin 'genblk1_0__S0/A[2]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_3_/Q' to pin 'genblk1_0__S0/A[3]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_4_/Q' to pin 'genblk1_0__S0/A[4]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_5_/Q' to pin 'genblk1_0__S0/A[5]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_6_/Q' to pin 'genblk1_0__S0/A[6]'. (PTE-014)
+Error: No net timing arc from pin 'address_reg_7_/Q' to pin 'genblk1_0__S0/A[7]'. (PTE-014)
+Error: No net timing arc from pin 'clk' to pin 'genblk1_0__S0/CLK'. (PTE-014)
+Error: No net timing arc from pin 'U448/Y' to pin 'genblk1_0__S0/D[0]'. (PTE-014)
+Error: No net timing arc from pin 'U447/Y' to pin 'genblk1_0__S0/D[1]'. (PTE-014)
+Error: No net timing arc from pin 'U446/Y' to pin 'genblk1_0__S0/D[2]'. (PTE-014)
+Error: No net timing arc from pin 'U445/Y' to pin 'genblk1_0__S0/D[3]'. (PTE-014)
+Error: No net timing arc from pin 'U444/Y' to pin 'genblk1_0__S0/D[4]'. (PTE-014)
+Error: No net timing arc from pin 'U443/Y' to pin 'genblk1_0__S0/D[5]'. (PTE-014)
+Error: No net timing arc from pin 'U442/Y' to pin 'genblk1_0__S0/D[6]'. (PTE-014)
+Error: No net timing arc from pin 'U441/Y' to pin 'genblk1_0__S0/D[7]'. (PTE-014)
+Error: No net timing arc from pin 'w_reg_0_/QN' to pin 'genblk1_0__S0/WEN'. (PTE-014)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'A[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TA[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'D[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TD[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_4__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_4__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'A[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TA[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'D[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TD[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_3__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_3__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'A[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TA[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'D[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TD[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_2__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_2__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'A[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TA[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'D[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TD[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_1__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_1__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[0]' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[1]' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[2]' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[3]' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[4]' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[5]' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[6]' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'A[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TA[7]' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'AY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[0]' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[0]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[1]' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[1]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[2]' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[2]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[3]' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[3]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[4]' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[4]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[5]' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[5]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[6]' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[6]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'D[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TD[7]' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Error: No timing arc in cell 'genblk1_0__S0(*sram_sp_hde)' from pin 'TEN' to pin 'DY[7]'. (PTE-008)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'WEN'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'A[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[7]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[6]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[5]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[4]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[3]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[2]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[1]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No setup timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+Warning: No hold timing arc in cell 'genblk1_0__S0(TENeq1andCENeq0andWENeq0)' with condition '*sram_sp_hde' from pin (rising)'CLK' to pin 'D[0]'. (PTE-011)
+
+****************************************
+Report : read_sdf /home/mark/Digital_Circuit/Row_Buffers/05_PTPX/File/Row_Buffers_SYN.sdf
+	-load_delay net
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : Row_Buffers
+Version: Q-2019.12
+Date   : Tue Jan  9 01:33:33 2024
+****************************************
+
+        1390 error(s)
+        warning: 10 WIDTH had no corresponding timing arc in the library,
+		 and are converted into user min_pulse_width.
+        Number of annotated cell delay arcs :      6756
+        Number of annotated net delay arcs  :      1748
+        Number of annotated timing checks   :      1100
+        Number of annotated constraints     :        10
+        TEMPERATURE: 25.00 (min)  25.00 (max)
+        VOLTAGE    : 0.90 (min)  0.90 (max)
+        PROCESS    : tt_typical_max_0p90v_25c (min)  tt_typical_max_0p90v_25c (max)
+1
+#======================================================
+#  4. Read Switching Activity File
+#======================================================
+read_vcd -strip_path TESTBED/I_$DESIGN $DESIGN\_SYN.fsdb
+
+======================================================================
+Summary:
+Total number of nets = 715
+Number of annotated nets = 715 (100.00%)
+Total number of leaf cells = 566
+Number of fully annotated leaf cells = 566 (100.00%)
+======================================================================
+
+1
+#======================================================
+#  5. Perform power analysis
+#======================================================
+check_power
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Checking 'out_of_table_range'.
+Warning: There are 1788 out_of_range ramps.
+Warning: There are 40 out_of_range loads.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+Warning: There are 1 library cells without function.
+0
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/Row_Buffers/05_PTPX/File/Row_Buffers_SYN.fsdb'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	1e-06ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time =  237.764 ns  Last event time =  415.831 ns  Last event time =  584.668 ns  Last event time =  756.555 ns  Last event time =  944.176 ns  Last event time =  1119.17 ns  Last event time =  1290.92 ns  Last event time =  1453.37 ns  Last event time =  1623.44 ns  Last event time =  1812.64 ns  Last event time =  1981.44 ns  Last event time =  2150.27 ns  Last event time =   2325.3 ns  Last event time =  2501.56 ns  Last event time =  2684.62 ns  Last event time =  2853.44 ns  Last event time =  3025.46 ns  Last event time =  3203.55 ns  Last event time =  3376.58 ns  Last event time =  3551.58 ns  Last event time =  3731.49 ns  Last event time =  3906.43 ns  Last event time =  4076.58 ns  Last event time =  4264.12 ns  Last event time =  4432.83 ns  Last event time =  4600.28 ns  Last event time =  4775.42 ns  Last event time =   4948.5 ns  Last event time =  5128.37 ns  Last event time =   5287.7 ns  Last event time =  5456.71 ns  Last event time =  5634.84 ns  Last event time =  5812.59 ns  Last event time =  6000.18 ns  Last event time =  6175.18 ns  Last event time =  6347.12 ns  Last event time =  6520.33 ns  Last event time =  6703.44 ns  Last event time =  6879.69 ns  Last event time =  7053.55 ns  Last event time =  7231.71 ns  Last event time =  7406.54 ns  Last event time =  7609.49 ns  Last event time =  7785.96 ns  Last event time =  7962.59 ns  Last event time =  8134.66 ns Information: analysis is done for time window (0ns - 8298.44ns)
+
+Information: Total simulation time = 8298.437500 ns
+1
+#======================================================
+#  6. Generate Power Report
+#======================================================
+# BUG command 
+set_power_analysis_options -waveform_interval 1 -waveform_format out -waveform_output vcd
+# vcd.out
+report_power > Report/$DESIGN\_POWER 
+ Last event time =   75.203 ns  Last event time =  250.096 ns  Last event time =  428.243 ns  Last event time =  597.073 ns  Last event time =   769.19 ns  Last event time =  956.515 ns  Last event time =  1131.44 ns  Last event time =  1300.46 ns  Last event time =  1465.92 ns  Last event time =  1634.57 ns  Last event time =  1822.32 ns  Last event time =  1993.93 ns  Last event time =  2159.64 ns  Last event time =  2340.82 ns  Last event time =  2512.81 ns  Last event time =  2695.37 ns  Last event time =  2865.93 ns  Last event time =   3037.8 ns  Last event time =  3214.12 ns  Last event time =  3387.75 ns  Last event time =  3564.08 ns  Last event time =  3743.84 ns  Last event time =  3918.93 ns  Last event time =  4087.73 ns  Last event time =  4276.58 ns  Last event time =  4443.85 ns  Last event time =  4612.93 ns  Last event time =  4787.69 ns  Last event time =  4959.57 ns  Last event time =  5139.08 ns  Last event time =  5298.44 ns  Last event time =  5468.94 ns  Last event time =  5647.08 ns  Last event time =  5843.85 ns  Last event time =  6009.75 ns  Last event time =   6184.8 ns  Last event time =  6359.51 ns  Last event time =  6531.69 ns  Last event time =  6715.71 ns  Last event time =  6890.81 ns  Last event time =  7065.81 ns  Last event time =  7243.95 ns  Last event time =  7420.37 ns  Last event time =  7621.97 ns  Last event time =  7797.07 ns  Last event time =  7972.34 ns  Last event time =   8147.3 ns report_power
+****************************************
+Report : Time Based Power
+Design : Row_Buffers
+Version: Q-2019.12
+Date   : Tue Jan  9 01:33:52 2024
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                2.508e-04 1.086e-04 5.271e-06 3.647e-04 (85.41%)  i
+combinational           1.757e-05 4.229e-05 2.446e-06 6.230e-05 (14.59%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.509e-04   (35.35%)
+  Cell Internal Power  = 2.683e-04   (62.84%)
+  Cell Leakage Power   = 7.718e-06   ( 1.81%)
+    Intrinsic Leakage  = 7.718e-06
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 4.270e-04  (100.00%)
+
+X Transition Power     = 6.053e-07
+Glitching Power        =    0.0000
+
+Peak Power             = 1.248e-03
+Peak Time              =      3375
+
+1
+exit
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'synthetic_library'. (CMD-041)
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+DES-002     Error                 640          540
+Total 1 type of message is suppressed
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1228.32 MB
+CPU usage for this session: 10 seconds 
+Elapsed time for this session: 24 seconds
+Diagnostics summary: 511 errors, 348 warnings, 18 informationals
+
+Thank you for using pt_shell!

@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/Add_base/04_PTPX/File/Add_base_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0)-(2935156250) time 0.010509 0.025903 0.045325 delta 73973760 73973760 total 370843648 370843648
+Write signals (0)-(2935156250) time 0.040688 0.037203 0.002793 delta 0 0 total 370843648 370843648
+Unload (0)-(2935156250) time 0.000115 0.000061 0.000054 delta 0 0 total 370843648 370843648
+au time 0.418752 0.077482 0.064449 delta 104865792 104865792 total 206852096 206852096

@@ -1,0 +1,196 @@
+
+                                 PrimeTime (R)
+
+                 Version Q-2019.12 for linux64 - Nov 20, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+#======================================================
+#
+# PrimeTime  Scripts (dctcl mode)
+#
+#======================================================
+#======================================================
+#  1. Set the Power Analysis Mode
+#======================================================
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+set power_analysis_mode time_based
+time_based
+set power_report_leakage_breakdowns true
+true
+set power_clock_network_include_register_clock_pin_power false
+false
+#======================================================
+#  2. Read and link the design
+#======================================================
+set search_path { ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/ 			        /usr/cad/synopsys/synthesis/2019.12/libraries/syn/ 			        /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ }
+ ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/            /usr/cad/synopsys/synthesis/2019.12/libraries/syn/            /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set DESIGN "Pooling"
+Pooling
+# read_verilog $DESIGN\_Wrapper.sv
+read_verilog $DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/mark/Digital_Circuit/Pooling/04_PTPX/File/Pooling_SYN.v'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+Linking design Pooling...
+Information: 369 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 112 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: 999 (98.33%) library cells are unused in library sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c..... (LNK-045)
+Information: total 1480 library cells are unused (LNK-046)
+Design 'Pooling' was successfully linked.
+Information: There are 1697 leaf cells, ports, hiers and 1631 nets in the design (LNK-047)
+1
+#======================================================
+#  3. Set transition time / annotate parasitics
+#======================================================
+set_input_transition .1 [all_inputs]
+1
+read_sdc File/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+read_sdf -load_delay net $DESIGN\_SYN.sdf
+
+****************************************
+Report : read_sdf /home/mark/Digital_Circuit/Pooling/04_PTPX/File/Pooling_SYN.sdf
+	-load_delay net
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : Pooling
+Version: Q-2019.12
+Date   : Thu Dec 21 02:32:16 2023
+****************************************
+
+        0 error(s)
+        Number of annotated cell delay arcs :      7069
+        Number of annotated net delay arcs  :      3681
+        Number of annotated timing checks   :      1932
+        TEMPERATURE: 25.00 (min)  25.00 (max)
+        VOLTAGE    : 0.90 (min)  0.90 (max)
+        PROCESS    : tt_typical_max_0p90v_25c (min)  tt_typical_max_0p90v_25c (max)
+1
+#======================================================
+#  4. Read Switching Activity File
+#======================================================
+read_vcd -strip_path TESTBED/I_$DESIGN $DESIGN\_SYN.fsdb
+
+======================================================================
+Summary:
+Total number of nets = 1631
+Number of annotated nets = 1631 (100.00%)
+Total number of leaf cells = 1372
+Number of fully annotated leaf cells = 1372 (100.00%)
+======================================================================
+
+1
+#======================================================
+#  5. Perform power analysis
+#======================================================
+check_power
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Checking 'out_of_table_range'.
+Warning: There are 3681 out_of_range ramps.
+Warning: There are 2 out_of_range loads.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+0
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/Pooling/04_PTPX/File/Pooling_SYN.fsdb'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	1e-06ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time =  2032.21 ns  Last event time =  4661.72 ns  Last event time =  6255.47 ns  Last event time =  7849.24 ns  Last event time =  9469.53 ns  Last event time =  11302.4 ns  Last event time =    12644 ns  Last event time =  14516.4 ns  Last event time =  16375.8 ns  Last event time =  17969.5 ns  Last event time =  20333.6 ns  Last event time =    22193 ns  Last event time =  23813.3 ns  Last event time =  25380.7 ns Information: analysis is done for time window (0ns - 26841.4ns)
+
+Information: Total simulation time = 26841.406250 ns
+1
+#======================================================
+#  6. Generate Power Report
+#======================================================
+# BUG command 
+set_power_analysis_options -waveform_interval 1 -waveform_format out -waveform_output vcd
+# vcd.out
+report_power > Report/$DESIGN\_POWER 
+ Last event time =  677.483 ns  Last event time =  2297.66 ns  Last event time =  4688.56 ns  Last event time =  6521.16 ns  Last event time =  8114.84 ns  Last event time =  9722.03 ns  Last event time =  11316.1 ns  Last event time =  12922.7 ns  Last event time =  14768.8 ns  Last event time =  16615.1 ns  Last event time =  18208.8 ns  Last event time =  20625.8 ns  Last event time =  22219.5 ns  Last event time =  24052.4 ns  Last event time =  25646.1 ns report_power
+****************************************
+Report : Time Based Power
+Design : Pooling
+Version: Q-2019.12
+Date   : Thu Dec 21 02:32:26 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                4.575e-05 6.225e-06 9.221e-06 6.119e-05 (80.90%)  i
+combinational           2.043e-06 4.976e-06 7.428e-06 1.445e-05 (19.10%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.120e-05   (14.81%)
+  Cell Internal Power  = 4.779e-05   (63.18%)
+  Cell Leakage Power   = 1.665e-05   (22.01%)
+    Intrinsic Leakage  = 1.665e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 7.564e-05  (100.00%)
+
+X Transition Power     = 1.581e-08
+Glitching Power        =    0.0000
+
+Peak Power             = 3.304e-03
+Peak Time              =     24331
+
+1
+exit
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'synthetic_library'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1266.55 MB
+CPU usage for this session: 8 seconds 
+Elapsed time for this session: 16 seconds
+Diagnostics summary: 2 warnings, 13 informationals
+
+Thank you for using pt_shell!

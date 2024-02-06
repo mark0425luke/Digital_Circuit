@@ -1,0 +1,22 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+                 Version Q-2019.12 for linux64 - Nov 20, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Error: could not open script file "ptpx.tcl" (CMD-015)
+pt_shell> exit
+
+Timing updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1077.80 MB
+CPU usage for this session: 4 seconds 
+Elapsed time for this session: 15 seconds
+Diagnostics summary: 2 errors
+
+Thank you for using pt_shell!

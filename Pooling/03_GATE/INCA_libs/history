@@ -1,0 +1,7 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(29Nov2023:02:09:04):( irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v -nontcglitch )
+s2::(21Dec2023:02:25:35):( irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v -nontcglitch )
+s3::(21Dec2023:02:30:20):( irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v -nontcglitch )

@@ -1,0 +1,1271 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Jan 10, 2024 at 18:15:23 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+Recompiling... reason: file './Adder_mask_SYN.sdf' is newer than expected.
+	expected: Wed Jan 10 18:07:09 2024
+	actual:   Wed Jan 10 18:15:15 2024
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Adder_mask:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "Adder_mask_SYN.sdf"
+	Compiled SDF file "Adder_mask_SYN.sdf.X" older than source SDF file "Adder_mask_SYN.sdf".
+	Recompiling.
+	Writing compiled SDF file to "Adder_mask_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     Adder_mask_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Adder_mask
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_14__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38120>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_14__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38141>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_13__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38162>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_13__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38183>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_13__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38204>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_12__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38225>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_12__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38246>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_12__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38267>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_12__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38288>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_11__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38309>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_11__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38330>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_11__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38351>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_11__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38372>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_11__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38393>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38414>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38435>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38456>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38477>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38498>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38519>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38540>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38561>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38582>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38603>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38624>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_9__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38645>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38666>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38687>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38708>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38729>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38750>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38771>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38792>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38813>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38834>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38855>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38876>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38897>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38918>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38939>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38960>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_7__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 38981>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39002>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39023>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39044>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39065>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39086>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39107>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39128>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39149>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39170>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39191>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39212>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39233>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39254>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39275>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39296>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39317>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39338>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39359>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39380>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__4_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39401>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39422>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39443>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39464>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39485>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39506>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39527>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39548>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39569>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39590>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39611>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__3_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39632>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__4_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39653>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39674>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39695>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39716>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39737>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39758>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39779>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39800>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39821>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39842>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39863>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__2_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39884>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__3_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39905>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__4_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39926>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39947>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39968>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 39989>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40010>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40031>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40052>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40073>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40094>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40115>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40136>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_2__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40157>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__2_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40178>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__3_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40199>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__4_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40220>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40241>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40262>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40283>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40304>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40325>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40346>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40367>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40388>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40409>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40430>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40451>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__2_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40472>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__3_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40493>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__4_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40514>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__5_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40535>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40556>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__7_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40577>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__8_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40598>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__9_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40619>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40640>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__11_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40661>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__12_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40682>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40703>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__14_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40724>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40745>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__0_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40762>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_15__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40783>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_10__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40804>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_8__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40825>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_6__6_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40846>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_5__10_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40867>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_4__13_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40888>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.009)) of instance TESTBED.I_Adder_mask.adder_mask_reg_3__15_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40909>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Adder_mask.adder_mask_reg_1__1_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40930>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.004)) of instance TESTBED.I_Adder_mask.adder_mask_reg_0__1_ of module DFFRPQ_X1M_A9TR <./Adder_mask_SYN.sdf, line 40951>.
+	Annotation completed with 0 Errors and 136 Warnings
+	SDF statistics: No. of Pathdelays = 16304  Annotated = 100.00% -- No. of Tchecks = 1496  Annotated = 27.14% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	       16304	       16304	      100.00
+		      $width	        1088	           0	        0.00
+		     $recrem	         136	         136	      100.00
+		  $setuphold	         272	         270	       99.26
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x6faaa752>
+			streams:   8, words: 11880
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                 2130      25
+		UDPs:                     136      73
+		Primitives:              4728       6
+		Timing outputs:          2126      13
+		Registers:                146      53
+		Scalar wires:            4439       -
+		Expanded wires:           400       2
+		Always blocks:              1       1
+		Initial blocks:             4       4
+		Cont. assignments:          0       8
+		Timing checks:           1904     414
+		Interconnect:            6537       -
+		Delayed tcheck signals:   408     142
+		Simulation timescale:     1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'Adder_mask_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__1_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__10_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__10_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__9_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__8_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__7_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__6_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__5_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__4_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__3_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__2_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__10_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__9_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__8_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__5_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__3_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__2_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__9_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__7_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__5_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__4_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__8_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__10_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__9_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__8_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__7_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__10_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_9__9_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__14_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__13_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__12_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_10__11_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159461 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.042000 : 42 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_11__15_
+            Time: 159461 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__10_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__13_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__11_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__10_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__9_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__8_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__7_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__6_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__5_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__4_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__15_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__14_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__13_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__12_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__11_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159637 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.061000 : 61 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__9_
+            Time: 159637 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__1_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__13_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__6_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__10_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_15__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_0__0_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__7_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__6_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__4_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__11_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__10_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__8_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__6_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__3_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_4__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__7_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__6_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_5__5_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__14_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__13_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__12_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__11_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__10_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__9_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__8_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_6__7_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_7__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__12_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__9_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_8__8_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_11__14_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_11__13_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_11__12_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_11__11_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_12__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_12__14_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_12__13_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_12__12_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_13__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_13__14_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_13__13_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_14__15_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159648 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.063000 : 63 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_14__14_
+            Time: 159648 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__15_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_1__14_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__14_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__13_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__12_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__11_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__10_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__9_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__8_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__7_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__6_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__5_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__4_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__3_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_2__2_
+            Time: 159827 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159827 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.060000 : 60 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Adder_mask.adder_mask_reg_3__14_
+            Time: 159827 PS
+
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+send input# 10
+send input# 11
+send input# 12
+send input# 13
+send input# 14
+send input# 15
+send input# 16
+send input# 17
+send input# 18
+send input# 19
+send input# 20
+send input# 21
+send input# 22
+send input# 23
+send input# 24
+send input# 25
+send input# 26
+send input# 27
+send input# 28
+send input# 29
+send input# 30
+send input# 31
+send input# 32
+send input# 33
+send input# 34
+send input# 35
+send input# 36
+send input# 37
+send input# 38
+send input# 39
+send input# 40
+send input# 41
+send input# 42
+send input# 43
+send input# 44
+send input# 45
+send input# 46
+send input# 47
+send input# 48
+send input# 49
+send input# 50
+send input# 51
+send input# 52
+send input# 53
+send input# 54
+send input# 55
+send input# 56
+send input# 57
+send input# 58
+send input# 59
+send input# 60
+send input# 61
+send input# 62
+send input# 63
+send input# 64
+send input# 65
+send input# 66
+send input# 67
+send input# 68
+send input# 69
+send input# 70
+send input# 71
+send input# 72
+send input# 73
+send input# 74
+send input# 75
+send input# 76
+send input# 77
+send input# 78
+send input# 79
+send input# 80
+send input# 81
+send input# 82
+send input# 83
+send input# 84
+send input# 85
+send input# 86
+send input# 87
+send input# 88
+send input# 89
+send input# 90
+send input# 91
+send input# 92
+send input# 93
+send input# 94
+send input# 95
+send input# 96
+send input# 97
+send input# 98
+send input# 99
+  END 
+Simulation complete via $finish(1) at time 24185156250 FS + 0
+./PATTERN.v:83 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Jan 10, 2024 at 18:16:06 CST  (total: 00:00:43)

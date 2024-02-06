@@ -1,0 +1,15 @@
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12
+Date:        Wed Dec 20 01:37:36 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'Calculate_BIT_CELL1_BIT_DAC1_BIT_W8_OUY32_BIT_IFM8', cell 'C185' does not drive any nets. (LINT-1)
+1

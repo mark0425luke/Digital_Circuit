@@ -1,0 +1,552 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version Q-2019.12 for linux64 - Nov 26, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#*  Set Libraries
+#todo Select Needed Technology
+#======================================================
+# ? 40nm technology
+set search_path { ./../01_RTL                                                            /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/      			        /usr/cad/synopsys/synthesis/2019.12/libraries/syn/   			        /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ }
+ ./../01_RTL                                                            /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/                 /usr/cad/synopsys/synthesis/2019.12/libraries/syn/              /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+#======================================================
+#*  Global Parameters
+#todo Change Current Design & Clock Period 
+#======================================================
+set DESIGN "Accumulator"
+Accumulator
+set CLK_period 3.125
+3.125
+set IN_DLY [expr 0.5*$CLK_period]
+1.5625
+set OUT_DLY [expr 0.5*$CLK_period]
+1.5625
+set hdlin_ff_always_sync_set_reset true
+true
+#======================================================
+#*  Read RTL Code
+#todo Change Needed Design.sv, Package.sv, Interface.sv
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/Accumulator.v
+Warning:  ./../01_RTL/Accumulator.v:37: Parameter keyword used in local parameter declaration. (VER-329)
+Presto compilation completed successfully.
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+1
+elaborate $DESIGN
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 64 in file
+	'./../01_RTL/Accumulator.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            67            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Accumulator line 56 in file
+		'./../01_RTL/Accumulator.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cur_state_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Accumulator line 84 in file
+		'./../01_RTL/Accumulator.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       pe_reg        | Flip-flop |  108  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Accumulator line 106 in file
+		'./../01_RTL/Accumulator.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   Accumulator_reg   | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully. (Accumulator)
+Elaborated 1 design.
+Current design is now 'Accumulator'.
+1
+# read_sverilog {$DESIGN\.sv}
+# current_design $DESIGN
+#======================================================
+#*  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#*  Set Design Constraints
+#======================================================
+# set_max_delay $CLK_period -from [all_inputs] -to [all_outputs]
+create_clock -name "clk" -period $CLK_period clk
+1
+set_ideal_net clk
+Information: It is recommended to use set_ideal_network command instead of set_ideal_net. (UID-604)
+Warning: Replacing set_ideal_net command with set_ideal_network -no_propagate command. (UID-605)
+Warning: Transferring ideal_net attribute onto the driver pin clk of net clk. (UID-606)
+1
+set_input_delay $IN_DLY -clock clk [all_inputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_output_delay $OUT_DLY -clock clk [all_outputs]
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#*  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'Accumulator'
+
+Loaded alib file './alib-52/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Accumulator'
+ Implement Synthetic for 'Accumulator'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TR' in the library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TR' in the library 'sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'Accumulator'. (DDB-72)
+Information: There is no timing violation in design Accumulator. Delay-based auto_ungroup will not be performed. (OPT-780)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:09    1133.1      0.00       0.0       0.0                             12.4246      0.00  
+    0:00:09    1133.1      0.00       0.0       0.0                             12.4246      0.00  
+    0:00:09    1133.1      0.00       0.0       0.0                             12.4246      0.00  
+    0:00:09    1133.1      0.00       0.0       0.0                             12.4246      0.00  
+MAPPED_RR: alt Accumulator out of 521 cells,  passing 216 cells to ABO for mapped RR
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+MAPPED_RR: alt Accumulator out of 521 cells,  passing 216 cells to ABO for mapped RR
+    0:00:09    1129.9      0.00       0.0       0.0                             12.1853      0.00  
+    0:00:09    1129.9      0.00       0.0       0.0                             12.1853      0.00  
+    0:00:09    1129.9      0.00       0.0       0.0                             12.1853      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:10    1129.7      0.00       0.0       0.0                             12.0383      0.00  
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8252      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8252      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8252      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:10    1129.7      0.00       0.0       0.0                              9.8251      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1996      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1996      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1996      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+    0:00:11    1128.1      0.00       0.0       0.0                              9.1991      0.00  
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#*  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#*  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#*  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/mark/Digital_Circuit/Accumulator/02_SYN/Netlist/Accumulator_SYN.v'.
+1
+write -format svsim   -output Netlist/$DESIGN\_Wrapper.sv
+Writing svsim file '/home/mark/Digital_Circuit/Accumulator/02_SYN/Netlist/Accumulator_Wrapper.sv'.
+Error: Cannot write out this design 'Accumulator' in SystemVerilog format.  (VO-19)
+0
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf
+Information: Writing timing information to file '/home/mark/Digital_Circuit/Accumulator/02_SYN/Netlist/Accumulator_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#*  Finish and Quit
+#======================================================
+report_resource
+ 
+****************************************
+Report : resources
+Design : Accumulator
+Version: Q-2019.12
+Date   : Wed Dec 20 03:42:20 2023
+****************************************
+
+
+Resource Report for this hierarchy in file ./../01_RTL/Accumulator.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_11J1_122_3569             |            |                            |
+|                | DP_OP_11J1_122_3569 |       |                            |
+=============================================================================
+
+Datapath Report for DP_OP_11J1_122_3569
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_11J1_122_3569  | add_101_I2 (Accumulator.v:101)                      |
+|                      | add_101_I3 (Accumulator.v:101)                      |
+|                      | add_101_I4 (Accumulator.v:101)                      |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Unsigned | 27    |                                          |
+| I2    | PI   | Unsigned | 27    |                                          |
+| I3    | PI   | Unsigned | 27    |                                          |
+| I4    | PI   | Unsigned | 27    |                                          |
+| O1    | PO   | Unsigned | 29    | I1 + I2 + I3 + I4 (Accumulator.v:101)    |
+==============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| DP_OP_11J1_122_3569                   |                    |                |
+|                    | DP_OP_11J1_122_3569 | str (area)      |                |
+===============================================================================
+
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Accumulator
+Version: Q-2019.12
+Date   : Wed Dec 20 03:42:20 2023
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: pe_reg_1__0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Accumulator_reg_27_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Accumulator        Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pe_reg_1__0_/CK (DFFRPQ_X0P5M_A9TR)                     0.00       0.00 r
+  pe_reg_1__0_/Q (DFFRPQ_X0P5M_A9TR)                      0.10       0.10 f
+  U281/Y (AND2_X0P5B_A9TR)                                0.07       0.17 f
+  U282/Y (OA1B2_X0P5M_A9TR)                               0.07       0.24 r
+  U291/CO (ADDF_X1M_A9TR)                                 0.08       0.32 r
+  U297/CO (CGEN_X1M_A9TR)                                 0.07       0.39 r
+  U301/CO (ADDF_X1M_A9TR)                                 0.06       0.45 r
+  intadd_0_U26/CO (ADDF_X1M_A9TR)                         0.06       0.51 r
+  intadd_0_U25/CO (ADDF_X1M_A9TR)                         0.06       0.56 r
+  intadd_0_U24/CO (ADDF_X1M_A9TR)                         0.06       0.62 r
+  intadd_0_U23/CO (ADDF_X1M_A9TR)                         0.06       0.67 r
+  intadd_0_U22/CO (ADDF_X1M_A9TR)                         0.06       0.73 r
+  intadd_0_U21/CO (ADDF_X1M_A9TR)                         0.06       0.79 r
+  intadd_0_U20/CO (ADDF_X1M_A9TR)                         0.06       0.84 r
+  intadd_0_U19/CO (ADDF_X1M_A9TR)                         0.06       0.90 r
+  intadd_0_U18/CO (ADDF_X1M_A9TR)                         0.06       0.95 r
+  intadd_0_U17/CO (ADDF_X1M_A9TR)                         0.06       1.01 r
+  intadd_0_U16/CO (ADDF_X1M_A9TR)                         0.06       1.07 r
+  intadd_0_U15/CO (ADDF_X1M_A9TR)                         0.06       1.12 r
+  intadd_0_U14/CO (ADDF_X1M_A9TR)                         0.06       1.18 r
+  intadd_0_U13/CO (ADDF_X1M_A9TR)                         0.06       1.23 r
+  intadd_0_U12/CO (ADDF_X1M_A9TR)                         0.06       1.29 r
+  intadd_0_U11/CO (ADDF_X1M_A9TR)                         0.06       1.35 r
+  intadd_0_U10/CO (ADDF_X1M_A9TR)                         0.06       1.40 r
+  intadd_0_U9/CO (ADDF_X1M_A9TR)                          0.06       1.46 r
+  intadd_0_U8/CO (ADDF_X1M_A9TR)                          0.06       1.51 r
+  intadd_0_U7/CO (ADDF_X1M_A9TR)                          0.06       1.57 r
+  intadd_0_U6/CO (ADDF_X1M_A9TR)                          0.06       1.62 r
+  intadd_0_U5/CO (ADDF_X1M_A9TR)                          0.06       1.68 r
+  intadd_0_U4/CO (ADDF_X1M_A9TR)                          0.06       1.74 r
+  intadd_0_U3/CO (ADDF_X1M_A9TR)                          0.06       1.79 r
+  intadd_0_U2/S (ADDF_X1M_A9TR)                           0.06       1.85 r
+  U275/Y (AND2_X0P5B_A9TR)                                0.05       1.90 r
+  Accumulator_reg_27_/D (DFFRPQ_X1M_A9TR)                 0.00       1.90 r
+  data arrival time                                                  1.90
+
+  clock clk (rise edge)                                   3.12       3.12
+  clock network delay (ideal)                             0.00       3.12
+  Accumulator_reg_27_/CK (DFFRPQ_X1M_A9TR)                0.00       3.12 r
+  library setup time                                     -0.02       3.10
+  data required time                                                 3.10
+  --------------------------------------------------------------------------
+  data required time                                                 3.10
+  data arrival time                                                 -1.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.20
+
+
+1
+report_area
+ 
+****************************************
+Report : area
+Design : Accumulator
+Version: Q-2019.12
+Date   : Wed Dec 20 03:42:20 2023
+****************************************
+
+Library(s) Used:
+
+    sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c (File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db)
+
+Number of ports:                          141
+Number of nets:                           562
+Number of cells:                          374
+Number of combinational cells:            235
+Number of sequential cells:               139
+Number of macros/black boxes:               0
+Number of buf/inv:                         10
+Number of references:                      17
+
+Combinational area:                497.599192
+Buf/Inv area:                        6.123600
+Noncombinational area:             630.503969
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  1128.103161
+Total area:                       1128.103161
+1
+exit
+
+Thank you...

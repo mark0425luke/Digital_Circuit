@@ -1,0 +1,17 @@
+rm -rf BSSLib.lib++
+rm -rf irun.history
+rm -rf INCA_libs nWaveLog
+rm -rf *.fsdb
+rm -rf *.log
+rm -rf *~
+rm -rf *.key
+rm -rf *.conf
+rm -rf *.rc
+rm -rf *.chain
+rm -rf *.lock
+rm -rf *.sinf
+rm -rf *.slist
+rm -rf *.slock
+rm -rf *.str
+rm -rf *.tlist
+rm -rf *.xlist

@@ -1,0 +1,47 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Activation
+Version: Q-2019.12
+Date   : Tue Dec 19 18:25:20 2023
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: Activation_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Activation[0]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Activation         Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Activation_reg[0]/CK (DFFRPQ_X1M_A9TR)                  0.00       0.00 r
+  Activation_reg[0]/Q (DFFRPQ_X1M_A9TR)                   0.24       0.24 r
+  Activation[0] (out)                                     0.00       0.24 r
+  data arrival time                                                  0.24
+
+  clock clk (rise edge)                                  26.56      26.56
+  clock network delay (ideal)                             0.00      26.56
+  output external delay                                 -13.28      13.28
+  data required time                                                13.28
+  --------------------------------------------------------------------------
+  data required time                                                13.28
+  data arrival time                                                 -0.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                       13.04
+
+
+1

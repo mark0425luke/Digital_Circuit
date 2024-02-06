@@ -1,0 +1,359 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Jan 15, 2024 at 15:12:38 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+Recompiling... reason: file './Add_base_SYN.sdf' is newer than expected.
+	expected: Mon Jan 15 15:06:00 2024
+	actual:   Mon Jan 15 15:11:14 2024
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Add_base:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "Add_base_SYN.sdf"
+	Compiled SDF file "Add_base_SYN.sdf.X" older than source SDF file "Add_base_SYN.sdf".
+	Recompiling.
+	Writing compiled SDF file to "Add_base_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     Add_base_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Add_base
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_0_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 257>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_1_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 278>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_2_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 299>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_3_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 320>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_4_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 341>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_5_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 362>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_6_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 383>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_7_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 404>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_8_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 425>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_9_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 446>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_10_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 467>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_11_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 488>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_12_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 509>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_13_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 530>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_14_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 551>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_15_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 572>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_16_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 593>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_17_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 614>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_18_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 635>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_19_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 656>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_20_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 677>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.007)) of instance TESTBED.I_Add_base.out_reg_21_ of module DFFRPQ_X1M_A9TR <./Add_base_SYN.sdf, line 698>.
+	Annotation completed with 0 Errors and 22 Warnings
+	SDF statistics: No. of Pathdelays = 484  Annotated = 100.00% -- No. of Tchecks = 242  Annotated = 27.27% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	         484	         484	      100.00
+		      $width	         176	           0	        0.00
+		     $recrem	          22	          22	      100.00
+		  $setuphold	          44	          44	      100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x4d33ef8b>
+			streams:   8, words: 11078
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  55      10
+		UDPs:                     22      73
+		Primitives:              199       6
+		Timing outputs:           71       6
+		Registers:                31      52
+		Scalar wires:            388       -
+		Expanded wires:           42       1
+		Always blocks:             1       1
+		Initial blocks:            4       4
+		Cont. assignments:         0       8
+		Timing checks:           308      68
+		Interconnect:            132       -
+		Delayed tcheck signals:   66      24
+		Simulation timescale:    1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'Add_base_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_21_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_20_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_19_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_18_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_17_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_16_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_15_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_14_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_13_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_12_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_11_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_10_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_9_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_8_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_7_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_6_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_5_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_4_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_3_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_2_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_1_
+            Time: 159481 PS
+
+
+Warning!  Timing violation
+           $recrem<removal>( negedge R:159481 PS, posedge CK &&& (ENABLE_D == 1'b1):159375 PS,  0.052000 : 52 PS,  0.500000 : 500 PS );
+            File: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v, line = 59876
+           Scope: TESTBED.I_Add_base.out_reg_0_
+            Time: 159481 PS
+
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+send input# 10
+send input# 11
+send input# 12
+send input# 13
+send input# 14
+send input# 15
+send input# 16
+send input# 17
+send input# 18
+send input# 19
+send input# 20
+send input# 21
+send input# 22
+send input# 23
+send input# 24
+send input# 25
+send input# 26
+send input# 27
+send input# 28
+send input# 29
+send input# 30
+send input# 31
+send input# 32
+send input# 33
+send input# 34
+send input# 35
+send input# 36
+send input# 37
+send input# 38
+send input# 39
+send input# 40
+send input# 41
+send input# 42
+send input# 43
+send input# 44
+send input# 45
+send input# 46
+send input# 47
+send input# 48
+send input# 49
+send input# 50
+send input# 51
+send input# 52
+send input# 53
+send input# 54
+send input# 55
+send input# 56
+send input# 57
+send input# 58
+send input# 59
+send input# 60
+send input# 61
+send input# 62
+send input# 63
+send input# 64
+send input# 65
+send input# 66
+send input# 67
+send input# 68
+send input# 69
+send input# 70
+send input# 71
+send input# 72
+send input# 73
+send input# 74
+send input# 75
+send input# 76
+send input# 77
+send input# 78
+send input# 79
+send input# 80
+send input# 81
+send input# 82
+send input# 83
+send input# 84
+send input# 85
+send input# 86
+send input# 87
+send input# 88
+send input# 89
+send input# 90
+send input# 91
+send input# 92
+send input# 93
+send input# 94
+send input# 95
+send input# 96
+send input# 97
+send input# 98
+send input# 99
+  END 
+Simulation complete via $finish(1) at time 2935156250 FS + 0
+./PATTERN.v:84 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Jan 15, 2024 at 15:13:19 CST  (total: 00:00:41)

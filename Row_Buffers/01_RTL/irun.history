@@ -1,0 +1,1 @@
+s1(08Jan2024:23:43:46):  irun TESTBED.v -define RTL -debug -f file_list.f -notimingchecks -incdir /usr/synthesis/dw/sim_ver 

@@ -1,0 +1,201 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Dec 19, 2023 at 18:25:27 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+Recompiling... reason: file './Activation_SYN.sdf' is newer than expected.
+	expected: Tue Dec 19 18:21:35 2023
+	actual:   Tue Dec 19 18:25:20 2023
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "Activation_SYN.sdf"
+	Compiled SDF file "Activation_SYN.sdf.X" older than source SDF file "Activation_SYN.sdf".
+	Recompiling.
+	Writing compiled SDF file to "Activation_SYN.sdf.X".
+    .Activation(Activation)
+                         |
+ncelab: *W,CUVMPW (./TESTBED.v,57|25): port sizes differ in port connection (8/9).
+	Annotating SDF timing data:
+		Compiled SDF file:     Activation_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Activation
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_21_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 407>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_22_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 428>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_23_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 449>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_24_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 470>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_25_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 491>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_26_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 512>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_27_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 533>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.ofm_reg_28_ of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 554>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.019)) of instance TESTBED.I_Activation.cur_state_reg of module DFFRPQ_X0P5M_A9TR <./Activation_SYN.sdf, line 575>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.out_valid_reg of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 596>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_0_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 617>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_1_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 638>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_2_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 659>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_3_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 680>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_4_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 701>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_5_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 722>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.01)) of instance TESTBED.I_Activation.Activation_reg_6_ of module DFFRPQ_X1M_A9TR <./Activation_SYN.sdf, line 743>.
+	Annotation completed with 0 Errors and 17 Warnings
+	SDF statistics: No. of Pathdelays = 200  Annotated = 100.00% -- No. of Tchecks = 187  Annotated = 27.27% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	         200	         200	      100.00
+		      $width	         136	           0	        0.00
+		     $recrem	          17	          17	      100.00
+		  $setuphold	          34	          34	      100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x15dd07ef>
+			streams:   9, words: 12418
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  40      12
+		UDPs:                     17      73
+		Primitives:              105       5
+		Timing outputs:           36       6
+		Registers:                26      53
+		Scalar wires:            279       -
+		Expanded wires:           29       1
+		Always blocks:             1       1
+		Initial blocks:            4       4
+		Cont. assignments:         0      16
+		Timing checks:           238      53
+		Interconnect:            101       -
+		Delayed tcheck signals:   51      19
+		Simulation timescale:    1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'Activation_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+send input# 10
+send input# 11
+send input# 12
+send input# 13
+send input# 14
+send input# 15
+send input# 16
+send input# 17
+send input# 18
+send input# 19
+send input# 20
+send input# 21
+send input# 22
+send input# 23
+send input# 24
+send input# 25
+send input# 26
+send input# 27
+send input# 28
+send input# 29
+send input# 30
+send input# 31
+send input# 32
+send input# 33
+send input# 34
+send input# 35
+send input# 36
+send input# 37
+send input# 38
+send input# 39
+send input# 40
+send input# 41
+send input# 42
+send input# 43
+send input# 44
+send input# 45
+send input# 46
+send input# 47
+send input# 48
+send input# 49
+send input# 50
+send input# 51
+send input# 52
+send input# 53
+send input# 54
+send input# 55
+send input# 56
+send input# 57
+send input# 58
+send input# 59
+send input# 60
+send input# 61
+send input# 62
+send input# 63
+send input# 64
+send input# 65
+send input# 66
+send input# 67
+send input# 68
+send input# 69
+send input# 70
+send input# 71
+send input# 72
+send input# 73
+send input# 74
+send input# 75
+send input# 76
+send input# 77
+send input# 78
+send input# 79
+send input# 80
+send input# 81
+send input# 82
+send input# 83
+send input# 84
+send input# 85
+send input# 86
+send input# 87
+send input# 88
+send input# 89
+send input# 90
+send input# 91
+send input# 92
+send input# 93
+send input# 94
+send input# 95
+send input# 96
+send input# 97
+send input# 98
+send input# 99
+  END 
+Simulation complete via $finish(1) at time 26974218750 FS + 0
+./PATTERN.v:82 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Dec 19, 2023 at 18:26:09 CST  (total: 00:00:42)

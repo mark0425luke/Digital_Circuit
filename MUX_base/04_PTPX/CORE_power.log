@@ -1,0 +1,196 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+                 Version Q-2019.12 for linux64 - Nov 20, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+#======================================================
+#
+# PrimeTime  Scripts (dctcl mode)
+#
+#======================================================
+#======================================================
+#  1. Set the Power Analysis Mode
+#======================================================
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+set power_analysis_mode time_based
+time_based
+set power_report_leakage_breakdowns true
+true
+set power_clock_network_include_register_clock_pin_power false
+false
+#======================================================
+#  2. Read and link the design
+#======================================================
+set search_path { ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/ 			        /usr/cad/synopsys/synthesis/2019.12/libraries/syn/ 			        /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ }
+ ./../01_RTL                   ./File/                   /usr/cad/synopsys/synthesis/2019.12/dw/sim_ver/            /usr/cad/synopsys/synthesis/2019.12/libraries/syn/            /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+#! Slow - 0.81v, 125C
+# set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+# set target_library {sc9_cln40g_base_rvt_ss_typical_max_0p81v_125c.db}
+#! Typical - 0.9v, 25C
+set link_library {* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+* dw_foundation.sldb standard.sldb sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set target_library {sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db}
+sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db
+set DESIGN "MUX_base"
+MUX_base
+read_verilog $DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/mark/Digital_Circuit/MUX_base/04_PTPX/File/MUX_base_SYN.v'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2019.12/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/SynopsysDC/db/sc9_base_rvt/sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c.db'
+Linking design MUX_base...
+Information: 369 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 112 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: 988 (97.24%) library cells are unused in library sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c..... (LNK-045)
+Information: total 1469 library cells are unused (LNK-046)
+Design 'MUX_base' was successfully linked.
+Information: There are 23966 leaf cells, ports, hiers and 23938 nets in the design (LNK-047)
+1
+#======================================================
+#  3. Set transition time / annotate parasitics
+#======================================================
+set_input_transition .1 [all_inputs]
+1
+read_sdc File/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+read_sdf -load_delay net $DESIGN\_SYN.sdf
+
+****************************************
+Report : read_sdf /home/mark/Digital_Circuit/MUX_base/04_PTPX/File/MUX_base_SYN.sdf
+	-load_delay net
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : MUX_base
+Version: Q-2019.12
+Date   : Mon Jan 15 22:42:59 2024
+****************************************
+
+        0 error(s)
+        Number of annotated cell delay arcs :     93947
+        Number of annotated net delay arcs  :     38057
+        Number of annotated timing checks   :       162
+        TEMPERATURE: 25.00 (min)  25.00 (max)
+        VOLTAGE    : 0.90 (min)  0.90 (max)
+        PROCESS    : tt_typical_max_0p90v_25c (min)  tt_typical_max_0p90v_25c (max)
+1
+#======================================================
+#  4. Read Switching Activity File
+#======================================================
+read_vcd -strip_path TESTBED/I_$DESIGN $DESIGN\_SYN.fsdb
+
+======================================================================
+Summary:
+Total number of nets = 23938
+Number of annotated nets = 23938 (100.00%)
+Total number of leaf cells = 10103
+Number of fully annotated leaf cells = 10103 (100.00%)
+======================================================================
+
+1
+#======================================================
+#  5. Perform power analysis
+#======================================================
+check_power
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Checking 'out_of_table_range'.
+Warning: There are 38057 out_of_range ramps.
+Warning: There are 2 out_of_range loads.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+0
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/MUX_base/04_PTPX/File/MUX_base_SYN.fsdb'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	1e-06ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time =  54.6875 ns  Last event time =  57.8125 ns  Last event time =  60.9715 ns  Last event time =  67.1875 ns  Last event time =  70.3125 ns  Last event time =  73.4375 ns  Last event time =  79.6875 ns  Last event time =  82.8125 ns  Last event time =  85.9375 ns  Last event time =  92.1875 ns  Last event time =  95.3125 ns  Last event time =  98.4375 ns  Last event time =  101.562 ns  Last event time =  107.812 ns  Last event time =  110.938 ns  Last event time =  114.062 ns  Last event time =  120.312 ns  Last event time =  123.438 ns  Last event time =  126.562 ns  Last event time =  132.812 ns  Last event time =  135.938 ns  Last event time =  139.062 ns  Last event time =  142.762 ns  Last event time =  148.438 ns  Last event time =  151.562 ns  Last event time =  154.688 ns  Last event time =  160.938 ns  Last event time =  164.062 ns  Last event time =  167.188 ns  Last event time =  173.438 ns  Last event time =  176.562 ns  Last event time =  179.688 ns  Last event time =  185.938 ns  Last event time =  189.062 ns  Last event time =  192.188 ns  Last event time =  195.482 ns  Last event time =  201.562 ns  Last event time =  204.688 ns  Last event time =  207.812 ns  Last event time =  214.062 ns  Last event time =  217.188 ns  Last event time =  220.312 ns  Last event time =  226.562 ns  Last event time =  229.688 ns  Last event time =  232.812 ns  Last event time =  239.062 ns  Last event time =  242.188 ns  Last event time =  245.312 ns  Last event time =  248.544 ns  Last event time =  254.688 ns  Last event time =  257.812 ns  Last event time =  260.938 ns  Last event time =  267.188 ns  Last event time =  270.312 ns  Last event time =  273.438 ns  Last event time =  277.507 ns  Last event time =  282.812 ns  Last event time =  285.938 ns  Last event time =  289.062 ns  Last event time =  295.312 ns  Last event time =  298.438 ns  Last event time =  301.562 ns  Last event time =  307.812 ns  Last event time =  310.938 ns  Last event time =  314.062 ns  Last event time =  317.983 ns  Last event time =  323.438 ns  Last event time =  326.562 ns  Last event time =  329.688 ns  Last event time =  335.938 ns  Last event time =  339.062 ns  Last event time =  342.188 ns  Last event time =  348.438 ns  Last event time =  351.562 ns  Last event time =  354.688 ns  Last event time =   358.37 ns Information: analysis is done for time window (0ns - 360.938ns)
+
+Information: Total simulation time = 360.937500 ns
+1
+#======================================================
+#  6. Generate Power Report
+#======================================================
+# BUG command 
+set_power_analysis_options -waveform_interval 1 -waveform_format out -waveform_output vcd
+# vcd.out
+report_power > Report/$DESIGN\_POWER 
+ Last event time =  54.6875 ns  Last event time =  57.8125 ns  Last event time =  60.9375 ns  Last event time =  67.1875 ns  Last event time =  70.3125 ns  Last event time =  73.4375 ns  Last event time =  79.6875 ns  Last event time =  82.8125 ns  Last event time =  85.9375 ns  Last event time =  89.7805 ns  Last event time =  95.3125 ns  Last event time =  98.4375 ns  Last event time =  101.562 ns  Last event time =  107.812 ns  Last event time =  110.938 ns  Last event time =  114.062 ns  Last event time =  120.312 ns  Last event time =  123.438 ns  Last event time =  126.562 ns  Last event time =  129.951 ns  Last event time =  135.938 ns  Last event time =  139.062 ns  Last event time =  142.188 ns  Last event time =  148.438 ns  Last event time =  151.562 ns  Last event time =  154.688 ns  Last event time =  160.938 ns  Last event time =  164.062 ns  Last event time =  167.188 ns  Last event time =  173.438 ns  Last event time =  176.562 ns  Last event time =  179.688 ns  Last event time =  183.474 ns  Last event time =  189.062 ns  Last event time =  192.188 ns  Last event time =  195.312 ns  Last event time =  201.562 ns  Last event time =  204.688 ns  Last event time =  207.812 ns  Last event time =  214.062 ns  Last event time =  217.188 ns  Last event time =  220.312 ns  Last event time =  226.562 ns  Last event time =  229.688 ns  Last event time =  232.812 ns  Last event time =  236.857 ns  Last event time =  242.188 ns  Last event time =  245.312 ns  Last event time =  248.438 ns  Last event time =  254.688 ns  Last event time =  257.812 ns  Last event time =  260.938 ns  Last event time =  267.188 ns  Last event time =  270.312 ns  Last event time =  273.438 ns  Last event time =  277.062 ns  Last event time =  282.812 ns  Last event time =  285.938 ns  Last event time =  289.062 ns  Last event time =  295.312 ns  Last event time =  298.438 ns  Last event time =  301.562 ns  Last event time =  305.817 ns  Last event time =  310.938 ns  Last event time =  314.062 ns  Last event time =  317.226 ns  Last event time =  323.438 ns  Last event time =  326.562 ns  Last event time =  329.688 ns  Last event time =  335.938 ns  Last event time =  339.062 ns  Last event time =  342.188 ns  Last event time =   346.33 ns  Last event time =  351.562 ns  Last event time =  354.688 ns  Last event time =  357.812 ns report_power
+****************************************
+Report : Time Based Power
+Design : MUX_base
+Version: Q-2019.12
+Date   : Mon Jan 15 22:43:09 2024
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                5.937e-05 7.976e-05 9.123e-07 1.400e-04 (21.62%)  i
+combinational           1.460e-04 2.804e-04 8.143e-05 5.078e-04 (78.38%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 3.601e-04   (55.59%)
+  Cell Internal Power  = 2.054e-04   (31.70%)
+  Cell Leakage Power   = 8.234e-05   (12.71%)
+    Intrinsic Leakage  = 8.234e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 6.478e-04  (100.00%)
+
+X Transition Power     = 1.744e-06
+Glitching Power        =    0.0000
+
+Peak Power             = 1.835e-03
+Peak Time              =       314
+
+1
+exit
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'synthetic_library'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1341.99 MB
+CPU usage for this session: 15 seconds 
+Elapsed time for this session: 17 seconds
+Diagnostics summary: 1 error, 2 warnings, 13 informationals
+
+Thank you for using pt_shell!

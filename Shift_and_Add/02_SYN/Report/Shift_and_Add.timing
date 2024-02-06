@@ -1,0 +1,49 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Shift_and_Add
+Version: Q-2019.12
+Date   : Wed Dec 20 01:09:01 2023
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: in_valid (input port clocked by clk)
+  Endpoint: cur_state_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Shift_and_Add      Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   13.28      13.28 f
+  in_valid (in)                                           0.00      13.28 f
+  U110/Y (INV_X0P5B_A9TR)                                 0.18      13.46 r
+  U297/Y (AOI21_X0P5M_A9TR)                               0.08      13.55 f
+  cur_state_reg[0]/D (DFFRPQ_X0P5M_A9TR)                  0.00      13.55 f
+  data arrival time                                                 13.55
+
+  clock clk (rise edge)                                  26.56      26.56
+  clock network delay (ideal)                             0.00      26.56
+  cur_state_reg[0]/CK (DFFRPQ_X0P5M_A9TR)                 0.00      26.56 r
+  library setup time                                     -0.04      26.52
+  data required time                                                26.52
+  --------------------------------------------------------------------------
+  data required time                                                26.52
+  data arrival time                                                -13.55
+  --------------------------------------------------------------------------
+  slack (MET)                                                       12.97
+
+
+1

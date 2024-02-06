@@ -1,0 +1,154 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Dec 21, 2023 at 02:10:41 CST
+irun
+	TESTBED.v
+	-define RTL
+	-debug
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Pooling:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x2729a637>
+			streams:   9, words: 13053
+		worklib.Pooling:v <0x5199fc86>
+			streams:  11, words: 11057
+		worklib.TESTBED:v <0x57ea0fd3>
+			streams:   1, words:   613
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              19      19
+		Scalar wires:            4       -
+		Vectored wires:          2       -
+		Always blocks:           6       6
+		Initial blocks:          4       4
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+  NUM_CYCLE   =      64
+  NUM_POOLING =       8
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'Pooling.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+send input# 10
+send input# 11
+send input# 12
+send input# 13
+send input# 14
+send input# 15
+send input# 16
+send input# 17
+send input# 18
+send input# 19
+send input# 20
+send input# 21
+send input# 22
+send input# 23
+send input# 24
+send input# 25
+send input# 26
+send input# 27
+send input# 28
+send input# 29
+send input# 30
+send input# 31
+send input# 32
+send input# 33
+send input# 34
+send input# 35
+send input# 36
+send input# 37
+send input# 38
+send input# 39
+send input# 40
+send input# 41
+send input# 42
+send input# 43
+send input# 44
+send input# 45
+send input# 46
+send input# 47
+send input# 48
+send input# 49
+send input# 50
+send input# 51
+send input# 52
+send input# 53
+send input# 54
+send input# 55
+send input# 56
+send input# 57
+send input# 58
+send input# 59
+send input# 60
+send input# 61
+send input# 62
+send input# 63
+send input# 64
+send input# 65
+send input# 66
+send input# 67
+send input# 68
+send input# 69
+send input# 70
+send input# 71
+send input# 72
+send input# 73
+send input# 74
+send input# 75
+send input# 76
+send input# 77
+send input# 78
+send input# 79
+send input# 80
+send input# 81
+send input# 82
+send input# 83
+send input# 84
+send input# 85
+send input# 86
+send input# 87
+send input# 88
+send input# 89
+send input# 90
+send input# 91
+send input# 92
+send input# 93
+send input# 94
+send input# 95
+send input# 96
+send input# 97
+send input# 98
+send input# 99
+  END 
+Simulation complete via $finish(1) at time 10105 NS + 0
+./PATTERN.v:93 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Dec 21, 2023 at 02:11:21 CST  (total: 00:00:40)

@@ -1,0 +1,53 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Router
+Version: Q-2019.12
+Date   : Thu Dec 21 02:51:56 2023
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: INPUT_TRUNK_WRITE
+              (input port clocked by clk)
+  Endpoint: IT/mem_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Router             Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   13.28      13.28 r
+  INPUT_TRUNK_WRITE (in)                                  0.00      13.28 r
+  U791/Y (NAND2B_X0P5M_A9TR)                              0.04      13.33 f
+  U918/Y (NOR3_X1M_A9TR)                                  0.22      13.54 r
+  U919/Y (BUF_X1P7M_A9TR)                                 0.23      13.77 r
+  U474/Y (INV_X2M_A9TR)                                   0.25      14.02 f
+  U1034/Y (AO22_X0P5M_A9TR)                               0.10      14.12 f
+  IT/mem_reg[0][0]/D (DFFRPQ_X0P5M_A9TR)                  0.00      14.12 f
+  data arrival time                                                 14.12
+
+  clock clk (rise edge)                                  26.56      26.56
+  clock network delay (ideal)                             0.00      26.56
+  IT/mem_reg[0][0]/CK (DFFRPQ_X0P5M_A9TR)                 0.00      26.56 r
+  library setup time                                     -0.02      26.54
+  data required time                                                26.54
+  --------------------------------------------------------------------------
+  data required time                                                26.54
+  data arrival time                                                -14.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                       12.42
+
+
+1

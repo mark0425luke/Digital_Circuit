@@ -1,0 +1,270 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Jan 31, 2024 at 18:20:19 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+Recompiling... reason: file './Decoder_SYN.sdf' is newer than expected.
+	expected: Wed Dec 20 02:21:06 2023
+	actual:   Wed Jan 31 18:19:45 2024
+file: TESTBED.v
+	module worklib.PATTERN:v
+		errors: 0, warnings: 0
+	module worklib.Decoder:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	module sc9_cln40g_base_rvt_neg.INV_X1M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.NAND2_X1A_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.NAND3_X1A_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.NOR2_X0P7M_A9TR:v
+		errors: 0, warnings: 0
+	module sc9_cln40g_base_rvt_neg.NOR2_X1A_A9TR:v
+		errors: 0, warnings: 0
+		Caching library 'sc9_cln40g_base_rvt_neg' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Reading SDF file from location "Decoder_SYN.sdf"
+	Compiled SDF file "Decoder_SYN.sdf.X" older than source SDF file "Decoder_SYN.sdf".
+	Recompiling.
+	Writing compiled SDF file to "Decoder_SYN.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     Decoder_SYN.sdf.X
+		Log file:              
+		Backannotation scope:  TESTBED.I_Decoder
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_0_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1617>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_1_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1638>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_2_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1659>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_3_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1680>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_4_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1701>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_5_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1722>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_6_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1743>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_7_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1764>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_8_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1785>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_9_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1806>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_10_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1827>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_12_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1848>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_13_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1869>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_14_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1890>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_15_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1911>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_16_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1932>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_17_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1953>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_18_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1974>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_19_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 1995>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_20_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2016>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_21_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2037>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_22_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2058>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_23_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2079>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_24_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2100>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_25_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2121>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_27_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2142>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_28_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2163>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_29_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2184>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_30_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2205>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_31_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2226>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_32_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2247>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_33_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2268>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_34_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2289>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_35_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2310>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_36_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2331>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_37_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2352>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_38_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2373>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_39_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2394>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_40_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2415>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_42_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2436>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_43_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2457>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_44_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2478>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_45_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2499>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_46_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2520>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_47_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2541>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_48_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2562>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_49_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2583>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_50_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2604>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_51_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2625>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_52_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2646>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_53_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2667>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_54_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2688>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_55_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2709>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_57_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2730>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_58_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2751>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_59_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2772>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_60_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2793>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_61_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2814>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_62_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2835>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_63_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 2856>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__0_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2877>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__1_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2898>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__2_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2919>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__3_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2940>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__4_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2961>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.which_filter_reg_0__0__5_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 2982>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.02)) of instance TESTBED.I_Decoder.cur_state_reg_0_ of module DFFRPQ_X0P5M_A9TR <./Decoder_SYN.sdf, line 3003>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.out_valid_reg of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 3024>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_11_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 3045>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_26_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 3066>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_41_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 3087>.
+ncelab: *W,SDFNET: Unable to annotate to non-existent timing check (HOLD (negedge R) (COND (ENABLE_D==1) (posedge CK)) (-0.011)) of instance TESTBED.I_Decoder.demux_reg_56_ of module DFFRPQ_X1M_A9TR <./Decoder_SYN.sdf, line 3108>.
+	Annotation completed with 0 Errors and 72 Warnings
+	SDF statistics: No. of Pathdelays = 599  Annotated = 100.00% -- No. of Tchecks = 792  Annotated = 27.27% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	         599	         599	      100.00
+		      $width	         576	           0	        0.00
+		     $recrem	          72	          72	      100.00
+		  $setuphold	         144	         144	      100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PATTERN:v <0x47e1489a>
+			streams:   9, words: 11709
+		worklib.TESTBED:v <0x5b2b4b74>
+			streams:   1, words:   712
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                  187      16
+		UDPs:                      72      73
+		Primitives:               407       5
+		Timing outputs:           184       7
+		Registers:                 81      53
+		Scalar wires:            1195       -
+		Expanded wires:             6       1
+		Always blocks:              1       1
+		Initial blocks:             4       4
+		Cont. assignments:          0      16
+		Timing checks:           1008     218
+		Interconnect:             443       -
+		Delayed tcheck signals:   216      74
+		Simulation timescale:     1fs
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'Decoder_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+send input#  0
+send input#  1
+send input#  2
+send input#  3
+send input#  4
+send input#  5
+send input#  6
+send input#  7
+send input#  8
+send input#  9
+send input# 10
+send input# 11
+send input# 12
+send input# 13
+send input# 14
+send input# 15
+send input# 16
+send input# 17
+send input# 18
+send input# 19
+send input# 20
+send input# 21
+send input# 22
+send input# 23
+send input# 24
+send input# 25
+send input# 26
+send input# 27
+send input# 28
+send input# 29
+send input# 30
+send input# 31
+send input# 32
+send input# 33
+send input# 34
+send input# 35
+send input# 36
+send input# 37
+send input# 38
+send input# 39
+send input# 40
+send input# 41
+send input# 42
+send input# 43
+send input# 44
+send input# 45
+send input# 46
+send input# 47
+send input# 48
+send input# 49
+send input# 50
+send input# 51
+send input# 52
+send input# 53
+send input# 54
+send input# 55
+send input# 56
+send input# 57
+send input# 58
+send input# 59
+send input# 60
+send input# 61
+send input# 62
+send input# 63
+send input# 64
+send input# 65
+send input# 66
+send input# 67
+send input# 68
+send input# 69
+send input# 70
+send input# 71
+send input# 72
+send input# 73
+send input# 74
+send input# 75
+send input# 76
+send input# 77
+send input# 78
+send input# 79
+send input# 80
+send input# 81
+send input# 82
+send input# 83
+send input# 84
+send input# 85
+send input# 86
+send input# 87
+send input# 88
+send input# 89
+send input# 90
+send input# 91
+send input# 92
+send input# 93
+send input# 94
+send input# 95
+send input# 96
+send input# 97
+send input# 98
+send input# 99
+  END 
+Simulation complete via $finish(1) at time 789453125 FS + 0
+./PATTERN.v:93 	$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s039: Exiting on Jan 31, 2024 at 18:21:01 CST  (total: 00:00:42)
