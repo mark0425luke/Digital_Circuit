@@ -1,0 +1,45 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : OR_base
+Version: Q-2019.12
+Date   : Thu Mar  7 19:10:08 2024
+****************************************
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: out_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  OR_base            Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  out_reg[0]/CK (DFFRPQ_X1M_A9TR)          0.00       0.00 r
+  out_reg[0]/Q (DFFRPQ_X1M_A9TR)           0.24       0.24 r
+  out[0] (out)                             0.00       0.24 r
+  data arrival time                                   0.24
+
+  clock clk (rise edge)                    0.78       0.78
+  clock network delay (ideal)              0.00       0.78
+  output external delay                    0.00       0.78
+  data required time                                  0.78
+  -----------------------------------------------------------
+  data required time                                  0.78
+  data arrival time                                  -0.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.54
+
+
+1

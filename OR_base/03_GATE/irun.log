@@ -1,0 +1,13 @@
+irun(64): 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s039: Started on Mar 07, 2024 at 19:11:01 CST
+irun
+	-timescale 1ns/1fs
+	-override_precision
+	-sdf_precision 1fs
+	TESTBED.v
+	-define GATE
+	-debug
+	-v /usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_neg.v
+	/usr/cad/arm/CBDK_TSMC40_Arm_f2.0/CIC/Verilog/sc9_cln40g_base_rvt_udp.v
+	-nontcglitch
+TOOL:	irun(64)	15.20-s039: Exiting on Mar 07, 2024 at 19:11:38 CST  (total: 00:00:37)

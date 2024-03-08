@@ -1,0 +1,55 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'Add_and_Distributor' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Add_and_Distributor
+Version: Q-2019.12
+Date   : Tue Nov 21 14:55:23 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt_typical_max_0p90v_25c   Library: sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+Wire Load Model Mode: top
+
+  Startpoint: in_valid (input port clocked by clk)
+  Endpoint: shift_and_add_reg[0][14][4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Add_and_Distributor
+                     Small                 sc9_cln40g_base_rvt_tt_typical_max_0p90v_25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    5.00       5.00 r
+  in_valid (in)                                           0.00 #     5.00 r
+  U5292/Y (BUF_X6M_A9TR)                                  0.21 #     5.21 r
+  U10917/Y (BUF_X1P4B_A9TR)                               0.25       5.47 r
+  U10920/Y (INV_X1B_A9TR)                                 0.30       5.77 f
+  U14060/Y (AO22_X0P5M_A9TR)                              0.10       5.87 f
+  shift_and_add_reg[0][14][4]/D (DFFRPQ_X0P5M_A9TR)       0.00       5.87 f
+  data arrival time                                                  5.87
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  shift_and_add_reg[0][14][4]/CK (DFFRPQ_X0P5M_A9TR)      0.00      10.00 r
+  library setup time                                     -0.02       9.98
+  data required time                                                 9.98
+  --------------------------------------------------------------------------
+  data required time                                                 9.98
+  data arrival time                                                 -5.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.10
+
+
+1

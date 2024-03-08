@@ -1,0 +1,6 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/fsdb2vcd /home/mark/Digital_Circuit/OR_base/04_PTPX/File/OR_base_SYN.fsdb
+uname(Linux EECS 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64)
+Load signals (0)-(90234375) time 0.011793 0.029965 0.054671 delta 74080256 74080256 total 371007488 371007488
+Write signals (0)-(90234375) time 0.056621 0.056075 0.000000 delta 159744 159744 total 371167232 371167232
+Unload (0)-(90234375) time 0.000270 0.000269 0.000000 delta 0 0 total 371167232 371167232
+au time 0.480350 0.102458 0.072155 delta 105189376 105189376 total 207175680 207175680

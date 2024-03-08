@@ -1,0 +1,1 @@
+./../02_SYN/Netlist/OR_base_SYN.sdc

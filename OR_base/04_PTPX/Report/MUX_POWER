@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/MUX/04_PTPX/File/MUX_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 10105ns)
+
+Information: Total simulation time = 10105.000000 ns
+****************************************
+Report : Time Based Power
+Design : MUX
+Version: Q-2019.12
+Date   : Tue Dec  5 04:08:18 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                5.610e-03 1.007e-03 4.771e-04 7.094e-03 (86.07%)  i
+combinational           1.509e-04 5.237e-04 4.733e-04 1.148e-03 (13.93%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.531e-03   (18.57%)
+  Cell Internal Power  = 5.760e-03   (69.89%)
+  Cell Leakage Power   = 9.504e-04   (11.53%)
+    Intrinsic Leakage  = 9.504e-04
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 8.242e-03  (100.00%)
+
+X Transition Power     = 8.066e-06
+Glitching Power        =    0.0000
+
+Peak Power             =    0.2521
+Peak Time              =       470
+
+1

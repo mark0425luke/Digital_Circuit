@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/mark/Digital_Circuit/OR_base/04_PTPX/File/OR_base_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 90.2344ns)
+
+Information: Total simulation time = 90.234375 ns
+****************************************
+Report : Time Based Power
+Design : OR_base
+Version: Q-2019.12
+Date   : Thu Mar  7 19:11:53 2024
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+register                1.136e-04 1.400e-05 1.056e-06 1.286e-04 (66.81%)  i
+combinational           3.140e-05 3.083e-05 1.668e-06 6.390e-05 (33.19%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 4.484e-05   (23.29%)
+  Cell Internal Power  = 1.450e-04   (75.30%)
+  Cell Leakage Power   = 2.724e-06   ( 1.42%)
+    Intrinsic Leakage  = 2.724e-06
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 1.925e-04  (100.00%)
+
+X Transition Power     = 7.513e-06
+Glitching Power        =    0.0000
+
+Peak Power             = 5.573e-04
+Peak Time              =        12
+
+1
